@@ -1,0 +1,373 @@
+{% load static %}
+<!doctype html>
+
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="es"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ruta del Empedrado 8k | 1ra Edición 2018</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% static 'apple-touch-icon.png' %}">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/customScrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/photoswipe.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/default-skin.css' %}">
+    <link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/transitions.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/color.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+</head>
+<body id="body" class="tg-home tg-hometwo">
+<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+<div id="tg-wrapper" class="tg-wrapper tg-haslayout" style="background-image: url('{% static 'images/empedrado.jpg' %}');  ;
+
+background-attachment: fixed;
+    background-size: cover;">
+
+    <header id="tg-header" class="tg-header tg-haslayout" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <strong class="tg-logo"><a href="/"><img src="{% static 'images/logo.png' %}"
+                                                             alt="company logo here"></a></strong>
+                    <div class="tg-navigationarea">
+                        <a class="tg-btn tg-btnbecommember" href="#"><span class="tg-badge">256 inscritos</span>Inscripciones</a>
+
+                        <nav id="tg-nav" class="tg-nav">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                        data-target="#tg-navigation" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
+                                <ul>
+                                    <li><a href="/">Inicio</a></li>
+                                         <li><a href="/#auspiciantes">Auspiciantes</a></li>
+                                    <li><a href="/#carrera">La Carrera</a></li>
+                                    <li><a href="/#recorrido">Recorrido</a></li>
+                                    <li><a href="/#categorias">Categorías</a></li>
+
+                                    <li><a href="/#faq">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+    <footer id="tg-footer" class="tg-footer tg-haslayout">
+
+        <div class="tg-footerbar">
+            <a id="tg-btnscrolltop" class="tg-btnscrolltop" href="javascript:void(0);"><i
+                    class="icon-chevron-up"></i></a>
+            <div class="container">
+                <div class="row">
+                    <ul class="tg-socialicons pull-right">
+                        <li class="tg-facebook"><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
+                        <li class="tg-instagram"><a href="javascript:void(0);"><i class="fa fa-instagram"></i></a></li>
+
+                    </ul>
+                    <p class="tg-copyrights pull-left">2018 All Rights Reserved © Ruta del Empedrado</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script src="{% static 'js/vendor/jquery-library.js' %}"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker(
+            {dateFormat: 'mm-dd-yy'}
+        );
+
+
+//jQuery time
+var current_fs, next_fs, previous_fs; //fieldsets
+var left, opacity, scale; //fieldset properties which we will animate
+var animating; //flag to prevent quick multi-click glitches
+
+jQuery(".next").click(function(){
+	if(animating) return false;
+	animating = true;
+
+	current_fs = $(this).parent();
+	next_fs = $(this).parent().next();
+
+	//activate next step on progressbar using the index of next_fs
+	jQuery("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+	//show the next fieldset
+	next_fs.show();
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale current_fs down to 80%
+			scale = 1 - (1 - now) * 0.2;
+			//2. bring next_fs from the right(50%)
+			left = (now * 50)+"%";
+			//3. increase opacity of next_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({
+        'transform': 'scale('+scale+')',
+        'position': 'absolute'
+      });
+			next_fs.css({'left': left, 'opacity': opacity});
+		},
+		duration: 800,
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		},
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+jQuery(".previous").click(function(){
+	if(animating) return false;
+	animating = true;
+
+	current_fs = $(this).parent();
+	previous_fs = $(this).parent().prev();
+
+	//de-activate current step on progressbar
+	jQuery("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+	//show the previous fieldset
+	previous_fs.show();
+	//hide the current fieldset with style
+	current_fs.animate({opacity: 0}, {
+		step: function(now, mx) {
+			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//1. scale previous_fs from 80% to 100%
+			scale = 0.8 + (1 - now) * 0.2;
+			//2. take current_fs to the right(50%) - from 0%
+			left = ((1-now) * 50)+"%";
+			//3. increase opacity of previous_fs to 1 as it moves in
+			opacity = 1 - now;
+			current_fs.css({'left': left});
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+		},
+		duration: 800,
+		complete: function(){
+			current_fs.hide();
+			animating = false;
+		},
+		//this comes from the custom easing plugin
+		easing: 'easeInOutBack'
+	});
+});
+
+jQuery(".submit").click(function(){
+	return false;
+})
+
+    });
+
+
+ $("#id_club").change( function(){
+  $('#id_clubNombre').attr('type', 'text');
+  console.log("Hola");
+});
+
+ $("#id_club").change(function() {
+    if(this.checked) {
+         $('#id_clubNombre').attr('type', 'text');
+    }
+    else{
+        $('#id_clubNombre').attr('type', 'hidden');
+    }
+});
+
+</script>
+<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus"></script>
+<script src="{% static 'js/jquery.singlePageNav.min.js' %}"></script>
+<script src="{% static 'js/customScrollbar.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/photoswipe.min.js' %}"></script>
+<script src="{% static 'js/photoswipe-ui-default.js' %}"></script>
+<script src="{% static 'js/prettyPhoto.js' %}"></script>
+<script src="{% static 'js/tilt.jquery.js' %}"></script>
+<script src="{% static 'js/countdown.js' %}"></script>
+
+
+<script src="{% static 'js/main.js' %}"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<style>
+    #DIV_1 {
+        bottom: -12.3906px;
+        box-sizing: border-box;
+        color: rgb(51, 51, 51);
+        height: 106px;
+        left: 1333.34px;
+        min-height: 1px;
+        position: fixed;
+        right: 0px;
+        text-align: right;
+        text-decoration: none solid rgb(51, 51, 51);
+        text-size-adjust: 100%;
+        top: 91%;
+        width: 266.656px;
+        z-index: 100;
+        column-rule-color: rgb(51, 51, 51);
+        perspective-origin: 133.328px 53px;
+        transform-origin: 133.328px 53px;
+        caret-color: rgb(51, 51, 51);
+        border: 0px none rgb(51, 51, 51);
+        font: normal normal 400 normal 14px / 20px "Roboto Condensed", sans-serif;
+        outline: rgb(51, 51, 51) none 0px;
+        padding: 0px 15px;
+        transition: all 0.2s ease 0s;
+    }
+
+    /*#DIV_1*/
+
+    #DIV_2 {
+        bottom: 85px;
+        box-sizing: border-box;
+        height: 21px;
+        left: 122.656px;
+        opacity: 0.2;
+        position: absolute;
+        right: 126px;
+        text-align: right;
+        text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+        text-size-adjust: 100%;
+        top: 0px;
+        width: 18px;
+        perspective-origin: 9px 10.5px;
+        transform-origin: 9px 10.5px;
+        font: normal normal 700 normal 21px / 21px "Roboto Condensed", sans-serif;
+    }
+
+    /*#DIV_2*/
+
+    #I_3 {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 21px;
+        text-align: right;
+        text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+        text-size-adjust: 100%;
+        width: 18px;
+        perspective-origin: 9px 10.5px;
+        transform-origin: 9px 10.5px;
+        font: normal normal 400 normal 21px / 21px FontAwesome;
+    }
+
+    /*#I_3*/
+
+    #I_3:before {
+        box-sizing: border-box;
+        content: '';
+        text-align: right;
+        text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+        text-size-adjust: 100%;
+        perspective-origin: 0px 0px;
+        transform-origin: 0px 0px;
+        font: normal normal 400 normal 21px / 21px FontAwesome;
+    }
+
+    /*#I_3:before*/
+
+    #A_4 {
+        box-sizing: border-box;
+        color: rgb(51, 122, 183);
+        text-align: right;
+        text-decoration: none solid rgb(51, 122, 183);
+        text-size-adjust: 100%;
+        column-rule-color: rgb(51, 122, 183);
+        caret-color: rgb(51, 122, 183);
+        border: 0px none rgb(51, 122, 183);
+        font: normal normal 400 normal 14px / 20px "Roboto Condensed", sans-serif;
+        outline: rgb(51, 122, 183) none 0px;
+    }
+
+    /*#A_4*/
+
+    #IMG_5 {
+        box-sizing: border-box;
+        color: rgb(51, 122, 183);
+        cursor: pointer;
+        display: block;
+        float: right;
+        height: 106px;
+        text-align: right;
+        text-decoration: none solid rgb(51, 122, 183);
+        text-size-adjust: 100%;
+        vertical-align: middle;
+        width: 131px;
+        column-rule-color: rgb(51, 122, 183);
+        perspective-origin: 65.5px 53px;
+        transform-origin: 65.5px 53px;
+        caret-color: rgb(51, 122, 183);
+        border: 0px none rgb(51, 122, 183);
+        font: normal normal 400 normal 14px / 20px "Roboto Condensed", sans-serif;
+        outline: rgb(51, 122, 183) none 0px;
+    }
+
+    /*#IMG_5*/
+
+    #IMG_6 {
+        box-sizing: border-box;
+        color: rgb(51, 122, 183);
+        cursor: pointer;
+        display: none;
+        float: right;
+        height: auto;
+        text-align: right;
+        text-decoration: none solid rgb(51, 122, 183);
+        text-size-adjust: 100%;
+        vertical-align: middle;
+        width: 131px;
+        column-rule-color: rgb(51, 122, 183);
+        perspective-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        caret-color: rgb(51, 122, 183);
+        border: 0px none rgb(51, 122, 183);
+        font: normal normal 400 normal 14px / 20px "Roboto Condensed", sans-serif;
+        outline: rgb(51, 122, 183) none 0px;
+    }
+
+    /*#IMG_6*/
+
+
+</style>
+
+
+</body>
+</html>
