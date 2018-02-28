@@ -117,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es-ec'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Guayaquil'
 
 USE_I18N = True
 
@@ -138,7 +138,7 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = '/home/urban/rutadelempedrado/static'
-GOOGLE_RECAPTCHA_SECRET_KEY = '6Le_9UYUAAAAAKY2W0Gx45DjPHhxIpkdkin-hAmm'
+GOOGLE_RECAPTCHA_SECRET_KEY = '6Leqr0kUAAAAAEyzOjJb-DIgkZ8FIEB9T0eZYDph'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
