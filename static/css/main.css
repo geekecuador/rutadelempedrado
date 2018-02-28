@@ -3527,3 +3527,357 @@ blockquote{
 }
 
 
+figure.snip0021 {
+  font-family: 'Raleway', Arial, sans-serif;
+  color: #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  background: #663366;
+  text-align: center;
+}
+figure.snip0021 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0021 img {
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0021 figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+figure.snip0021 figcaption > div {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  width: 50%;
+  position: relative;
+}
+figure.snip0021 figcaption::before {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  width: 2px;
+  content: '';
+  opacity: 0;
+  background-color: rgba(227, 216, 0, 0.5);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0021 h2,
+figure.snip0021 p {
+  margin: 0;
+  padding: 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+	color:white;
+  width: 100%;
+  left: 0;
+  -webkit-transition: opacity 0.45s, -webkit-transform 0.45s;
+  transition: opacity 0.45s,-webkit-transform 0.45s,-moz-transform 0.45s,-o-transform 0.45s,transform 0.45s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0021 h2 {
+  text-align: right;
+  display: inline-block;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, transparent 60%, rgba(102, 51, 102, 0.6) 100%);
+  -webkit-transform: translate3d(50%, 0%, 0);
+  transform: translate3d(50%, 0%, 0);
+}
+figure.snip0021 h2 span {
+  font-weight: 800;
+}
+figure.snip0021 p {
+  display: block;
+  bottom: 0;
+  text-align: left;
+  font-weight: 300;
+  top: 0%;
+  color: #000;
+  background: #ffffff;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0%, transparent 40%, rgba(102, 51, 102, 0.6) 100%);
+  -webkit-transform: translate3d(-50%, 0%, 0);
+  transform: translate3d(-50%, 0%, 0);
+}
+figure.snip0021 .curl {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(135deg, #ffffff, #f3f3f3 20%, #cccccc 38%, #bbbbbb 44%, #aaaaaa 50%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.4));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all .3s ease;
+}
+figure.snip0021 .curl:before,
+figure.snip0021 .curl:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 12%;
+  bottom: 6%;
+  width: 70%;
+  max-width: 300px;
+  max-height: 100px;
+  height: 55%;
+  box-shadow: 0 12px 15px rgba(0, 0, 0, 0.3);
+  transform: skew(-10deg) rotate(-6deg);
+}
+figure.snip0021 .curl:after {
+  left: auto;
+  right: 6%;
+  bottom: auto;
+  top: 14%;
+  transform: skew(-15deg) rotate(-84deg);
+}
+figure.snip0021 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0021:hover img,
+figure.snip0021.hover img {
+  opacity: 0.7;
+}
+figure.snip0021:hover figcaption h2,
+figure.snip0021.hover figcaption h2,
+figure.snip0021:hover figcaption p,
+figure.snip0021.hover figcaption p {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0021:hover figcaption h2,
+figure.snip0021.hover figcaption h2 {
+  opacity: 1;
+}
+figure.snip0021:hover figcaption p,
+figure.snip0021.hover figcaption p {
+  opacity: 1;
+}
+figure.snip0021:hover figcaption::before,
+figure.snip0021.hover figcaption::before {
+  background: #ffffff;
+  top: 0px;
+  bottom: 0px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0021:hover figcaption .curl,
+figure.snip0021.hover figcaption .curl {
+  width: 40px;
+  height: 40px;
+  -webkit-transition-delay: 0.7s;
+  transition-delay: 0.7s;
+}
+
+
+
+
+
+
+
+button:focus { outline: none; }
+
+button:hover { opacity: .8; }
+
+.fa {
+    font-size: 20px;
+}
+
+.fa-camera {
+    color: white;
+    transition: 1s all ease 1s;
+ }
+
+#pool {
+  width: 100vw;
+  height: 100vh;
+  background: none;
+  position: absolute;
+  overflow: hidden;
+}
+
+.button-wrapper {
+  width: 54px;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  right: 20px;
+  bottom: 20px;
+  transition: 1.25s all ease .9s;
+}
+
+button {
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 4;
+  position: relative;
+  transition: 1.25s all ease .1s;
+
+}
+
+.main-button {
+  background: #663366;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 54px;
+  height: 54px;
+  background: #663366;
+  border-radius: 50%;
+  z-index: -99;
+  pointer-events: none;
+  transition: 1.25s all ease .5s;
+}
+
+    /*déplacement btn i*/
+.button-wrapper.clicked {
+  -webkit-transform: rotate(90deg) translateY(-96px);
+  -ms-transform: rotate(90deg) translateY(-96px);
+  transform: rotate(180deg) translateY(-20px) translateX(20px);
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .3s all ease .6s;
+  transition: .3s all ease .6s;
+}
+
+.button-wrapper.clicked .main-button {
+  opacity: 0;
+  -webkit-transition: .3s all ease .3s;
+  transition: .3s all ease .3s;
+}
+
+/*déclencheur layer*/
+.button-wrapper.clicked .layer {
+  -webkit-transform: scale(100);
+  -ms-transform: scale(100);
+  transform: scale(100);
+  -webkit-transition: 2.25s all ease .9s;
+  transition: 1.25s all ease .9s;
+}
+
+.layered-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.7s all ease .3s;
+}
+
+.layered-content.active { opacity: 1; }
+
+.close-button {
+  background: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #663366;
+}
+
+.layered-content.active .close-button {
+  -webkit-animation: .2s bounceIn;
+  animation: .2s bounceIn;
+}
+
+.content p {
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content p a {
+  font-size: 12px;
+  background: white;
+  padding: 2.5px 5px;
+  color: #ff2670;
+  text-decoration: none;
+  border-radius: 50px;
+  display: inline-block;
+  margin-left: 1.5px;
+}
+
+.content p {
+  opacity: 0;
+  position: relative;
+  top: -7.5px;
+  -webkit-transition: .5s all ease .5s;
+  transition: .5s all ease .5s;
+}
+
+.layered-content.active .content p {
+  opacity: 1;
+  top: 0;
+  -webkit-transition: .5s all ease 1s;
+  transition: .5s all ease 1s;
+}

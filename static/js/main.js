@@ -622,12 +622,37 @@ jQuery(document).on('ready', function () {
     });
 
     var ctaLayer = new google.maps.KmlLayer({
-        url: 'https://xhaviero.com/ruta.kml',
+        url: 'http://xhaviero.com/ruta.kml',
         map: map
     });
 
+
+  var $mainButton = jQuery(".main-button"),
+                $closeButton = jQuery(".close-button"),
+                $buttonWrapper = jQuery(".button-wrapper"),
+                $ripple = jQuery(".ripple"),
+                $layer = jQuery(".layered-content");
+
+            $mainButton.on("click", function(){
+                document.getElementById('pool').style.zIndex = 99;
+                $buttonWrapper.addClass("clicked").delay(900).queue(function(next){
+                    $layer.addClass("active");
+                    next();
+                });
+            });
+
+            $closeButton.on("click", function(){
+                document.getElementById('pool').style.zIndex = -1;
+                $layer.removeClass("active");
+                $buttonWrapper.removeClass("clicked");
+            });
 
 
 
 
 });
+$("figure").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);

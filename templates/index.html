@@ -22,7 +22,7 @@
                         </div>
                         <div class="tg-btnwhite">
                             <br>
-                            <a class="tg-btn" href="#" style="background-color: white; color: #422C81">Inscripciones</a>
+                            <a class="tg-btn" href="/inscripcion" style="background-color: white; color: #422C81">Inscripciones</a>
 
                         </div>
                     </div>
@@ -33,69 +33,58 @@
 
     <main id="tg-main" class="tg-main tg-haslayout" style="background-color: white;">
 
-        <section id="auspiciantes" class="tg-sectionspace tg-haslayout" >
-            <div class="container" >
+        <section id="auspiciantes" class="tg-sectionspace tg-haslayout"
+                 style="background-image: url('{% static 'images/empedrado.jpg' %}');
+
+                         background-attachment: fixed;
+                         background-size: cover;    margin-top: -21px;">
+            <div class="container">
                 <div class="row">
                     <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
                         <div class="tg-sectionhead">
                             <div class="tg-sectionheading">
-                                <span  >Rutal del Empedrado</span>
-                                <h2  >Nuestros auspiciantes</h2>
+
+                                <h2 style="color: white">Nuestros auspiciantes</h2>
                             </div>
                             <div class="tg-description">
-                                <p  >Ruta del Empedrado 8K, cuenta con el importante apoyo de varios auspiciantes, quienes
+                                <p style="color: white">Ruta del Empedrado 8K, cuenta con el importante apoyo de varios
+                                    auspiciantes, quienes
                                     confían en el comité organizador y ofrecen su aporte económico para el evento.
                                     Estos auspiciantes son:</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <ul class="tg-brands">
-                            <li class="tg-brand">
-                                <figure><a href="javascript:void(0);"><img src="{% static 'images/brands/ambasodas.jpg' %}"
-                                                                           alt="image description"></a></figure>
-                            </li>
-                            <li class="tg-brand">
-                                <figure><a href="javascript:void(0);"><img src="{% static 'images/brands/elepco.jpg' %}"
-                                                                           alt="image description"></a></figure>
-                            </li>
-                            <li class="tg-brand">
-                                <figure><a href="javascript:void(0);"><img src="{% static 'images/brands/ft.jpg' %}"
-                                                                           alt="image description"></a></figure>
-                            </li>
-                            <li class="tg-brand">
-                                <figure><a href="javascript:void(0);"><img src="{% static 'images/brands/gutman.jpg' %}"
-                                                                           alt="image description"></a></figure>
-                            </li>
-                            <li class="tg-brand">
-                                <figure><a href="javascript:void(0);"><img src="{% static 'images/brands/jp.jpg' %}"
-                                                                           alt="image description"></a></figure>
-                            </li>
-                            <li class="tg-brand">
-                                <figure><a href="javascript:void(0);"><img src="{% static 'images/brands/sakra.jpg' %}"
-                                                                           alt="image description"></a></figure>
-                            </li>
-                            <li class="tg-brand">
-                                <figure><a href="javascript:void(0);"><img src="{% static 'images/brands/lapradera.jpg' %}"
-                                                                           alt="image description"></a></figure>
-                            </li>
-                            <li class="tg-brand">
-                                <figure><a href="javascript:void(0);"><img src="{% static 'images/brands/ambasodas.jpg' %}"
-                                                                           alt="image description"></a></figure>
-                            </li>
-                        </ul>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <figure><a href="javascript:void(0);"><img
+                                src="{% static 'images/auspiciantes/auspiciantes00001.png' %}"
+                                alt="image description" width="30%"></a></figure>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <figure><a href="javascript:void(0);"><img
+                                src="{% static 'images/auspiciantes/auspiciantes00002.png' %}"
+                                alt="image description" width="50%"></a></figure>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" style="padding-top: 25px">
+                        <figure><a href="javascript:void(0);"><img
+                                src="{% static 'images/auspiciantes/auspiciantes00003.png' %}"
+                                alt="image description" width="50%"></a></figure>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" style="padding-top: 25px">
+                        <figure><a href="javascript:void(0);"><img
+                                src="{% static 'images/auspiciantes/auspiciantes00004.png' %}"
+                                alt="image description" width="50%"></a></figure>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <figure><a href="javascript:void(0);"><img
+                                src="{% static 'images/auspiciantes/auspiciantes00005.png' %}"
+                                alt="image description" width="50%"></a></figure>
                     </div>
                 </div>
             </div>
         </section>
 
 
-
-
-        <section class="tg-sectionspace tg-haslayout" id="carrera" style="background-image: url('{% static 'images/empedrado.jpg' %}');  ;
-
-background-attachment: fixed;
-    background-size: cover;">
+        <section class="tg-sectionspace tg-haslayout" id="carrera">
             <div class="container">
                 <div class="row">
                     <div class="tg-register tg-registershortcode">
@@ -103,24 +92,22 @@ background-attachment: fixed;
                             <div class="tg-textshortcode">
                                 <div class="tg-sectionhead tg-textalignleft">
                                     <div class="tg-sectionheading">
-                                        <span style="color: white">Abril 08, 2018 | 07 am - 2 pm</span>
-                                        <h2 style="color: white">Ruta del empedrado</h2>
+                                        <span>Abril 08, 2018 | 07 am - 2 pm</span>
+                                        <h2>Ruta del empedrado</h2>
                                     </div>
                                     <div class="tg-description">
-                                        <p style="color: white" >El Festival Atlético Ruta del Empedrado 8k 2018 es el evento masivo más
+                                        <p>El Festival Atlético Ruta del Empedrado 8k 2018 es el evento masivo más
                                             importante en el centro del país, buscamos una propuesta de construcción
                                             colectiva, diferente e inclusiva para lograr dinamizar a la población y la
                                             economía de Latacunga.</p>
                                         <br>
-                                        <p style="color: white"> La competencia recorrerá los más bellos rincones del centro histórico de la
+
+                                        <p> La competencia recorrerá los más bellos rincones del centro histórico de la
                                             ciudad de Latacunga y permitirá dar al turista, visitante y atletas
                                             foráneos una experiencia sin igual al descubrir la belleza de la ciudad y
                                             los retos deportivos que en ella existen.</p>
                                     </div>
-                                    <div class="tg-btnarea">
-                                        <a class="tg-btn pullo" href="#" >Inscripciones</a>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -130,6 +117,46 @@ background-attachment: fixed;
                         </div>
                     </div>
                 </div>
+
+
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 project wow animated animated4 fadeInLeft">
+                    <div class="project-hover">
+                        <h3 class="text-uppercase  text-center"
+                            style="color:#4F377D; font-size: 20px;font-style:italic ">Competencia Atlética <img
+                                src="{% static 'images/mapeo.svg' %}" alt="" width="60px"></h3>
+
+                        <hr/>
+                        <p>La competencia recorrerá los más bellos rincones del centro histórico de la ciudad de
+                            Latacunga y permitirá dar al turista, visitante y atletas foráneos una experiencia sin igual
+                            al descubrir la belleza de la ciudad y los retos deportivos que en ella existen.</p>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 project project-4 wow animated animated3 fadeInLeft">
+                    <div class="project-hover">
+                        <h3 class="text-uppercase  text-center"
+                            style="color:#4F377D; font-size: 20px;font-style:italic ">FERIAS Y SHOWS <img
+                                src="{% static 'images/mapeo.svg' %}" alt="" width="60px"></h3>
+                        <hr/>
+                        <p>En las plazas de los barrios participantes habrá presencia en ferias de las marcas
+                            participantes y de los emprendimientos .</p>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 project project-4 wow animated animated2 fadeInLeft">
+                    <div class="project-hover">
+                        <h3 class="text-uppercase  text-center"
+                            style="color:#4F377D; font-size: 20px;font-style:italic ">Mapeo de Negocios <img
+                                src="{% static 'images/mapeo.svg' %}" alt="" width="60px"></h3>
+                        <hr/>
+                        <p>Delegaciones en cada barrio realizarán el levantamiento de información de micro y pequeños
+                            negocios tradicionales de artes y oficios y nuevos emprendimientos pertenecientes a su
+                            sector.</p>
+
+                    </div>
+                </div>
+
+
             </div>
         </section>
 
@@ -141,7 +168,6 @@ background-attachment: fixed;
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <div class="tg-sectionhead tg-textalignleft">
                                 <div class="tg-sectionheading">
-                                    <span>Ruta del Empedrado 8K</span>
                                     <h2>La Carrera</h2>
                                 </div>
                                 <div class="tg-description">
@@ -332,376 +358,469 @@ background-attachment: fixed;
                     <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
                         <div class="tg-sectionhead">
                             <div class="tg-sectionheading">
-                                <span >Ruta del Empedrado</span>
-                                <h2 >CATEGORÍAS</h2>
+                                <span>Ruta del Empedrado</span>
+                                <h2>CATEGORÍAS</h2>
                             </div>
                             <div class="tg-description">
-                                <p  >La Ruta del Empedrado .</p>
+                                <p>La Ruta del Empedrado .</p>
                             </div>
                         </div>
                     </div>
-                    <div class="tg-packages">
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="tg-package tg-basicplan">
-                                <div class="tg-packagehead">
-                                    <figure class="tg-themepostimg categorias">
-                                        <img src="{% static 'images/empedrado.jpg' %}" alt="image description">
-                                        <figcaption class="tg-packagedetail">
-                                            <h3>JUVENIL</h3>
-                                            <span>Categoría</span>
-                                            <h4>
-                                                <sub></sub>
-                                                <span>14-19</span>
-                                                <em>años</em>
-                                            </h4>
+                    {#                    <div class="tg-packages">#}
+                    {#                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">#}
+                    {#                            <div class="tg-package tg-basicplan">#}
+                    {#                                <div class="tg-packagehead">#}
+                    {#                                    <figure class="tg-themepostimg categorias">#}
+                    {#                                        <img src="{% static 'images/empedrado.jpg' %}" alt="image description">#}
+                    {#                                        <figcaption class="tg-packagedetail">#}
+                    {#                                            <h3>JUVENIL</h3>#}
+                    {#                                            <span>Categoría</span>#}
+                    {#                                            <h4>#}
+                    {#                                                <sub></sub>#}
+                    {#                                                <span>14-19</span>#}
+                    {#                                                <em>años</em>#}
+                    {#                                            </h4>#}
+                    {##}
+                    {#                                        </figcaption>#}
+                    {#                                    </figure>#}
+                    {#                                </div>#}
+                    {#                                <ul>#}
+                    {#                                    <li class="tg-btnregister"><a class="tg-btn" href="/inscripciones">Inscríbete</a></li>#}
+                    {#                                </ul>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">#}
+                    {#                            <div class="tg-package tg-corporateplan">#}
+                    {#                                <div class="tg-packagehead">#}
+                    {#                                    <figure class="tg-themepostimg categorias">#}
+                    {#                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">#}
+                    {#                                        <figcaption class="tg-packagedetail">#}
+                    {#                                            <h3>SENIOR</h3>#}
+                    {#                                            <span>Categoría</span>#}
+                    {#                                            <h4>#}
+                    {#                                                <sub></sub>#}
+                    {#                                                <span>20-40</span>#}
+                    {#                                                <em>años</em>#}
+                    {#                                            </h4>#}
+                    {##}
+                    {#                                        </figcaption>#}
+                    {#                                    </figure>#}
+                    {#                                </div>#}
+                    {#                                <ul>#}
+                    {#                                    <li class="tg-btnregister"><a class="tg-btn" href="/inscripciones">Inscríbete</a></li>#}
+                    {#                                </ul>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {#                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">#}
+                    {#                            <div class="tg-package tg-corporateplan">#}
+                    {#                                <div class="tg-packagehead">#}
+                    {#                                    <figure class="tg-themepostimg categorias">#}
+                    {#                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">#}
+                    {#                                        <figcaption class="tg-packagedetail">#}
+                    {#                                            <h3>MASTER</h3>#}
+                    {#                                            <span>Categoría</span>#}
+                    {#                                            <h4>#}
+                    {#                                                <sub></sub>#}
+                    {#                                                <span>40-50</span>#}
+                    {#                                                <em>años</em>#}
+                    {#                                            </h4>#}
+                    {##}
+                    {#                                        </figcaption>#}
+                    {#                                    </figure>#}
+                    {#                                </div>#}
+                    {#                                <ul>#}
+                    {#                                    <li class="tg-btnregister"><a class="tg-btn" href="/inscripciones">Inscríbete</a></li>#}
+                    {#                                </ul>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {##}
+                    {#                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">#}
+                    {#                            <div class="tg-package tg-corporateplan">#}
+                    {#                                <div class="tg-packagehead">#}
+                    {#                                    <figure class="tg-themepostimg categorias">#}
+                    {#                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">#}
+                    {#                                        <figcaption class="tg-packagedetail">#}
+                    {#                                            <h3>SUPER MASTER</h3>#}
+                    {#                                            <span>Categoría</span>#}
+                    {#                                            <h4>#}
+                    {#                                                <sub></sub>#}
+                    {#                                                <span>+50</span>#}
+                    {#                                                <em>años</em>#}
+                    {#                                            </h4>#}
+                    {##}
+                    {#                                        </figcaption>#}
+                    {#                                    </figure>#}
+                    {#                                </div>#}
+                    {#                                <ul>#}
+                    {#                                    <li class="tg-btnregister"><a class="tg-btn" href="/inscripciones">Inscríbete</a></li>#}
+                    {#                                </ul>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {##}
+                    {#                    </div>#}
+                    {##}
+                    {##}
+                    {#                    <div class="tg-packages" style="padding-top: 2%">#}
+                    {#                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">#}
+                    {#                            <div class="tg-package tg-basicplan">#}
+                    {#                                <div class="tg-packagehead">#}
+                    {#                                    <figure class="tg-themepostimg categorias">#}
+                    {#                                        <img src="{% static 'images/empedrado.jpg' %}" alt="image description">#}
+                    {#                                        <figcaption class="tg-packagedetail">#}
+                    {#                                            <h3 style="font-size: 16px; ">CAPACIDADES ESPECIALES</h3>#}
+                    {#                                            <span>Categoría</span>#}
+                    {#                                            <h4>#}
+                    {#                                                <sub></sub>#}
+                    {#                                                <span>8km</span>#}
+                    {#                                                <em>Distancia</em>#}
+                    {#                                            </h4>#}
+                    {##}
+                    {#                                        </figcaption>#}
+                    {#                                    </figure>#}
+                    {#                                </div>#}
+                    {#                                <ul>#}
+                    {#                                    <li class="tg-btnregister"><a class="tg-btn" href="/inscripciones">Inscríbete</a></li>#}
+                    {#                                </ul>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">#}
+                    {#                            <div class="tg-package tg-corporateplan">#}
+                    {#                                <div class="tg-packagehead">#}
+                    {#                                    <figure class="tg-themepostimg categorias">#}
+                    {#                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">#}
+                    {#                                        <figcaption class="tg-packagedetail">#}
+                    {#                                            <h3>FAMILIAR</h3>#}
+                    {#                                            <span>Categoría</span>#}
+                    {#                                            <h4>#}
+                    {#                                                <sub></sub>#}
+                    {#                                                <span>5km</span>#}
+                    {##}
+                    {#                                            </h4>#}
+                    {##}
+                    {#                                        </figcaption>#}
+                    {#                                    </figure>#}
+                    {#                                </div>#}
+                    {#                                <ul>#}
+                    {#                                    <li class="tg-btnregister"><a class="tg-btn" href="/inscripciones">Inscríbete</a></li>#}
+                    {#                                </ul>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {##}
+                    {#                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">#}
+                    {#                            <div class="tg-package tg-corporateplan">#}
+                    {#                                <div class="tg-packagehead">#}
+                    {#                                    <figure class="tg-themepostimg categorias">#}
+                    {#                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">#}
+                    {#                                        <figcaption class="tg-packagedetail">#}
+                    {#                                            <h3>RECREATIVA</h3>#}
+                    {#                                            <span>Categoría</span>#}
+                    {#                                            <h4>#}
+                    {#                                                <sub></sub>#}
+                    {#                                                <span>FAMILIAR</span>#}
+                    {##}
+                    {#                                            </h4>#}
+                    {##}
+                    {#                                        </figcaption>#}
+                    {#                                    </figure>#}
+                    {#                                </div>#}
+                    {#                                <ul>#}
+                    {#                                    <li class="tg-btnregister"><a class="tg-btn" href="#">Inscríbete</a></li>#}
+                    {#                                </ul>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {##}
+                    {#                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">#}
+                    {#                            <div class="tg-package tg-corporateplan">#}
+                    {#                                <div class="tg-packagehead">#}
+                    {#                                    <figure class="tg-themepostimg categorias">#}
+                    {#                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">#}
+                    {#                                        <figcaption class="tg-packagedetail">#}
+                    {#                                            <h3>RECREATIVA</h3>#}
+                    {#                                            <span>Categoría</span>#}
+                    {#                                            <h4>#}
+                    {#                                                <sub></sub>#}
+                    {#                                                <span>PET</span>#}
+                    {##}
+                    {#                                            </h4>#}
+                    {##}
+                    {#                                        </figcaption>#}
+                    {#                                    </figure>#}
+                    {#                                </div>#}
+                    {#                                <ul>#}
+                    {#                                    <li class="tg-btnregister"><a class="tg-btn" href="#">Inscríbete</a></li>#}
+                    {#                                </ul>#}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {##}
+                    {##}
+                    {#                    </div>#}
+                </div>
 
-                                        </figcaption>
-                                    </figure>
+
+                <div class="row">
+                    <div class="col-md-6">
+
+
+                        <figure class="snip0021">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample21.jpg" alt="sample21"/>
+                            <figcaption>
+                                <div>
+                                    <h2 style="colow:white">Categorías <span style="font-size: 20px">competitivas</span>
+                                        <div style="font-size: 25px;">
+                                            <br>
+                                            Juvenil
+                                            <br>
+                                            Master <br>
+                                            Senior <br>
+                                            Super Master <br>
+                                        </div>
+                                    </h2>
+
                                 </div>
-                                <ul>
-                                    <li class="tg-btnregister"><a class="tg-btn" href="#">Inscríbete</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="tg-package tg-corporateplan">
-                                <div class="tg-packagehead">
-                                    <figure class="tg-themepostimg categorias">
-                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">
-                                        <figcaption class="tg-packagedetail">
-                                            <h3>SENIOR</h3>
-                                            <span>Categoría</span>
-                                            <h4>
-                                                <sub></sub>
-                                                <span>20-40</span>
-                                                <em>años</em>
-                                            </h4>
+                                <div>
+                                    <p>Carrera 8k <br>
 
-                                        </figcaption>
-                                    </figure>
+                                        <strong>Fecha:</strong> Domingo 04 de junio de 2017 <br>
+
+                                        <strong>Hora:</strong> 08h30 <br>
+
+                                        <strong>Punto Partida:</strong> Planta Grupo El Comercio, P.V. Maldonado 11515 y
+                                        El Tablón <br>
+
+                                        <strong>Punto de Llegada:</strong> Estadio Olímpico Atahualpa <br>
+
+                                        <strong>Costo de inscripción:</strong> USD 25 <br>
+                                        <strong>Beneficios atletas:</strong> <br>
+                                        Camiseta, chip de competencia, hidratación en el recorrido, medalla, seguro de
+                                        accidentes, kit de atleta entregado en la llegada. asistencia con paramédicos y
+                                        ambulancias con cobertura en toda la ruta, condiciones de seguridad en ruta
+                                        coordinadas con la Policía Nacional y Municipal.</p>
+                                    <div class="curl"></div>
                                 </div>
-                                <ul>
-                                    <li class="tg-btnregister"><a class="tg-btn" href="#">Inscríbete</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="tg-package tg-corporateplan">
-                                <div class="tg-packagehead">
-                                    <figure class="tg-themepostimg categorias">
-                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">
-                                        <figcaption class="tg-packagedetail">
-                                            <h3>MASTER</h3>
-                                            <span>Categoría</span>
-                                            <h4>
-                                                <sub></sub>
-                                                <span>40-50</span>
-                                                <em>años</em>
-                                            </h4>
-
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <ul>
-                                    <li class="tg-btnregister"><a class="tg-btn" href="#">Inscríbete</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="tg-package tg-corporateplan">
-                                <div class="tg-packagehead">
-                                    <figure class="tg-themepostimg categorias">
-                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">
-                                        <figcaption class="tg-packagedetail">
-                                            <h3>SUPER MASTER</h3>
-                                            <span>Categoría</span>
-                                            <h4>
-                                                <sub></sub>
-                                                <span>+50</span>
-                                                <em>años</em>
-                                            </h4>
-
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <ul>
-                                    <li class="tg-btnregister"><a class="tg-btn" href="#">Inscríbete</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
+                                <a href="#"></a>
+                            </figcaption>
+                        </figure>
 
                     </div>
-
-
-                    <div class="tg-packages" style="padding-top: 2%">
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="tg-package tg-basicplan">
-                                <div class="tg-packagehead">
-                                    <figure class="tg-themepostimg categorias">
-                                        <img src="{% static 'images/empedrado.jpg' %}" alt="image description">
-                                        <figcaption class="tg-packagedetail">
-                                            <h3 style="font-size: 16px; ">CAPACIDADES ESPECIALES</h3>
-                                            <span>Categoría</span>
-                                            <h4>
-                                                <sub></sub>
-                                                <span>8km</span>
-                                                <em>Distancia</em>
-                                            </h4>
-
-                                        </figcaption>
-                                    </figure>
+                    <div class="col-md-6">
+                        <figure class="snip0021 ">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample20.jpg" alt="sample20"/>
+                            <figcaption>
+                                <div>
+                                    <h2 style="colow:white">Categorías <span style="font-size: 20px">competitivas</span>
+                                        <div style="font-size: 25px;">
+                                            <br>
+                                            Juvenil
+                                            <br>
+                                            Master <br>
+                                            Senior <br>
+                                            Super Master <br>
+                                        </div>
+                                    </h2>
                                 </div>
-                                <ul>
-                                    <li class="tg-btnregister"><a class="tg-btn" href="#">Inscríbete</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="tg-package tg-corporateplan">
-                                <div class="tg-packagehead">
-                                    <figure class="tg-themepostimg categorias">
-                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">
-                                        <figcaption class="tg-packagedetail">
-                                            <h3>FAMILIAR</h3>
-                                            <span>Categoría</span>
-                                            <h4>
-                                                <sub></sub>
-                                                <span>5km</span>
+                                <div>
 
-                                            </h4>
+                                    <p>Carrera 8k <br>
 
-                                        </figcaption>
-                                    </figure>
+                                        <strong>Fecha:</strong> Domingo 04 de junio de 2017 <br>
+
+                                        <strong>Hora:</strong> 08h30 <br>
+
+                                        <strong>Punto Partida:</strong> Planta Grupo El Comercio, P.V. Maldonado 11515 y
+                                        El Tablón <br>
+
+                                        <strong>Punto de Llegada:</strong> Estadio Olímpico Atahualpa <br>
+
+
+                                        <strong>Costo de inscripción:</strong> USD 25 <br>
+                                        <strong>Beneficios atletas:</strong> <br>
+                                        Camiseta, chip de competencia, hidratación en el recorrido, medalla, seguro de
+                                        accidentes, kit de atleta entregado en la llegada. asistencia con paramédicos y
+                                        ambulancias con cobertura en toda la ruta, condiciones de seguridad en ruta
+                                        coordinadas con la Policía Nacional y Municipal.</p>
+                                    <div class="curl"></div>
                                 </div>
-                                <ul>
-                                    <li class="tg-btnregister"><a class="tg-btn" href="#">Inscríbete</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="tg-package tg-corporateplan">
-                                <div class="tg-packagehead">
-                                    <figure class="tg-themepostimg categorias">
-                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">
-                                        <figcaption class="tg-packagedetail">
-                                            <h3>RECREATIVA</h3>
-                                            <span>Categoría</span>
-                                            <h4>
-                                                <sub></sub>
-                                                <span>FAMILIAR</span>
-
-                                            </h4>
-
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <ul>
-                                    <li class="tg-btnregister"><a class="tg-btn" href="#">Inscríbete</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                            <div class="tg-package tg-corporateplan">
-                                <div class="tg-packagehead">
-                                    <figure class="tg-themepostimg categorias">
-                                        <img src="{% static  'images/empedrado.jpg' %}" alt="image description">
-                                        <figcaption class="tg-packagedetail">
-                                            <h3>RECREATIVA</h3>
-                                            <span>Categoría</span>
-                                            <h4>
-                                                <sub></sub>
-                                                <span>PET</span>
-
-                                            </h4>
-
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <ul>
-                                    <li class="tg-btnregister"><a class="tg-btn" href="#">Inscríbete</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                                <a href="#"></a>
+                            </figcaption>
+                        </figure>
 
 
                     </div>
                 </div>
+
+
             </div>
         </section>
 
 
-        <section class="tg-sectionspace tg-haslayout" style="background-color: #f7f7f7">
+{#        <section class="tg-sectionspace tg-haslayout" style="background-color: #f7f7f7">#}
+{#            <div class="container">#}
+{#                <div class="row">#}
+{#                    <div class="tg-newsarticles">#}
+{#                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">#}
+{#                            <div class="tg-textshortcode">#}
+{#                                <div class="tg-sectionhead tg-textalignleft">#}
+{#                                    <div class="tg-sectionheading">#}
+{##}
+{#                                        <h2>Consejos para correr 8k</h2>#}
+{#                                    </div>#}
+{#                                    <div class="tg-description">#}
+{#                                        <p>Recomendaciones generales, preparación, y alimentación previa la carrera. El#}
+{#                                            cansancio es una de las barreras más duras de superar para runners. Se#}
+{#                                            manifiesta a través de calambres y mareos, y afecta el rendimiento. Las#}
+{#                                            recomendaciones para mantener la energía y mejorar la performance</p>#}
+{#                                    </div>#}
+{#                                    <div class="tg-btnarea">#}
+{##}
+{#                                        <a class="tg-btn" href="#">Inscripciones</a>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">#}
+{#                            <div class="tg-articles">#}
+{#                                <div class="row">#}
+{#                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">#}
+{#                                        <article class="tg-article">#}
+{#                                            <figure><img src="{% static 'images/newsarticles/img-01.jpg' %}"#}
+{#                                                         alt="image description"></figure>#}
+{#                                            <div class="tg-contentbox" style="background-color: #f7f7f7">#}
+{#                                                <div class="tg-title">#}
+{#                                                    <h2><a href="#">Primer consejo</a></h2>#}
+{#                                                </div>#}
+{#                                                <ul class="tg-postmaradata">#}
+{#                                                    <li><i class="icon-calendar-full"></i>#}
+{#                                                        <time datetime="2017-12-12">Febrero 18, 2018</time>#}
+{#                                                    </li>#}
+{##}
+{#                                                </ul>#}
+{#                                                <div class="tg-description">#}
+{#                                                    <p>Texto de ejemplo</p>#}
+{#                                                </div>#}
+{#                                                <a class="tg-btnreadmore" href="#">Leer más</a>#}
+{#                                            </div>#}
+{#                                        </article>#}
+{#                                    </div>#}
+{#                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">#}
+{#                                        <article class="tg-article">#}
+{#                                            <figure><img src="{% static 'images/newsarticles/img-02.jpg' %}"#}
+{#                                                         alt="image description"></figure>#}
+{#                                            <div class="tg-contentbox" style="background-color: #f7f7f7">#}
+{#                                                <div class="tg-title">#}
+{#                                                    <h2><a href="#">Segundo Consejo</a></h2>#}
+{#                                                </div>#}
+{#                                                <ul class="tg-postmaradata">#}
+{#                                                    <li><i class="icon-calendar-full"></i>#}
+{#                                                        <time datetime="2017-12-12">Marzo 27, 2018</time>#}
+{#                                                    </li>#}
+{##}
+{#                                                </ul>#}
+{#                                                <div class="tg-description">#}
+{#                                                    <p>Texto de ejemplo</p>#}
+{#                                                </div>#}
+{#                                                <a class="tg-btnreadmore" href="javascript:void(0);">Leer más</a>#}
+{#                                            </div>#}
+{#                                        </article>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </section>#}
+
+
+        <section class="tg-askquestions tg-haslayout tg-sectionspace tg-bglight" id="faq">
             <div class="container">
                 <div class="row">
-                    <div class="tg-newsarticles">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="tg-textshortcode">
-                                <div class="tg-sectionhead tg-textalignleft">
-                                    <div class="tg-sectionheading">
-                                        <span>Ruta del Empedrado</span>
-                                        <h2>Consejos para correr 8k</h2>
-                                    </div>
-                                    <div class="tg-description">
-                                        <p>Recomendaciones generales, preparación, y alimentación previa la carrera. El
-                                            cansancio es una de las barreras más duras de superar para runners. Se
-                                            manifiesta a través de calambres y mareos, y afecta el rendimiento. Las
-                                            recomendaciones para mantener la energía y mejorar la performance</p>
-                                    </div>
-                                    <div class="tg-btnarea">
+                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                        <div class="tg-faqs">
+                            <div class="tg-sectionhead tg-textalignleft">
+                                <div class="tg-sectionheading">
 
-                                        <a class="tg-btn" href="#">Inscripciones</a>
+                                    <h2>Preguntas frecuentes</h2>
+                                </div>
+                            </div>
+                            <div id="tg-accordion" class="tg-accordion" role="tablist" aria-multiselectable="true">
+                                <div class="tg-panel">
+                                    <h4><span>Q.</span>Consectetur adipisicing elit, sed do eiusmod?</h4>
+                                    <div class="tg-panelcontent">
+                                        <div class="tg-description">
+                                            <p><span>A.</span>Sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                aliqua. Ut eni minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip exea commodo consequat aute irure dolor.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tg-panel">
+                                    <h4><span>Q.</span>Nisi ut aliquip ex ea commodo consequat?</h4>
+                                    <div class="tg-panelcontent">
+                                        <div class="tg-description">
+                                            <p><span>A.</span>Sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                aliqua. Ut eni minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip exea commodo consequat aute irure dolor.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tg-panel">
+                                    <h4><span>Q.</span>Tempor incididunt ut labore?</h4>
+                                    <div class="tg-panelcontent">
+                                        <div class="tg-description">
+                                            <p><span>A.</span>Sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                aliqua. Ut eni minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip exea commodo consequat aute irure dolor.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tg-panel">
+                                    <h4><span>Q.</span>Dolore magna aliqua enim ad minim?</h4>
+                                    <div class="tg-panelcontent">
+                                        <div class="tg-description">
+                                            <p><span>A.</span>Sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                aliqua. Ut eni minim veniam, quis nostrud exercitation ullamco laboris
+                                                nisi ut aliquip exea commodo consequat aute irure dolor.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <div class="tg-articles">
-                                <div class="row">
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <article class="tg-article">
-                                            <figure><img src="{% static 'images/newsarticles/img-01.jpg' %}"
-                                                         alt="image description"></figure>
-                                            <div class="tg-contentbox" style="background-color: #f7f7f7">
-                                                <div class="tg-title">
-                                                    <h2><a href="#">Primer consejo</a></h2>
-                                                </div>
-                                                <ul class="tg-postmaradata">
-                                                    <li><i class="icon-calendar-full"></i>
-                                                        <time datetime="2017-12-12">Febrero 18, 2018</time>
-                                                    </li>
-
-                                                </ul>
-                                                <div class="tg-description">
-                                                    <p>Texto de ejemplo</p>
-                                                </div>
-                                                <a class="tg-btnreadmore" href="#">Leer más</a>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                        <article class="tg-article">
-                                            <figure><img src="{% static 'images/newsarticles/img-02.jpg' %}"
-                                                         alt="image description"></figure>
-                                            <div class="tg-contentbox" style="background-color: #f7f7f7">
-                                                <div class="tg-title">
-                                                    <h2><a href="#">Segundo Consejo</a></h2>
-                                                </div>
-                                                <ul class="tg-postmaradata">
-                                                    <li><i class="icon-calendar-full"></i>
-                                                        <time datetime="2017-12-12">Marzo 27, 2018</time>
-                                                    </li>
-
-                                                </ul>
-                                                <div class="tg-description">
-                                                    <p>Texto de ejemplo</p>
-                                                </div>
-                                                <a class="tg-btnreadmore" href="javascript:void(0);">Leer más</a>
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                        <div class="tg-askquestion">
+                            <div class="tg-heading">
+                                <h2>Quieres formar parte como<span>voluntario?</span></h2>
                             </div>
+                            <form class="tg-formtheme tg-formaskquestions">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <input type="text" name="nombre" class="form-control"
+                                               placeholder="Nombre Completo*">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" placeholder="Email*">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="telefono" class="form-control"
+                                               placeholder="Teléfono (Opcional)">
+                                    </div>
+
+                                    <div class="g-recaptcha"
+                                         data-sitekey="6Le_9UYUAAAAALqkkBtFDpeLoJ8c9pVrYnvOgEV6"></div>
+                                    <button type="submit" class="tg-btn">Enviar</button>
+                                </fieldset>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
-
-<section class="tg-askquestions tg-haslayout tg-sectionspace tg-bglight" id="faq">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-                    <div class="tg-faqs">
-                        <div class="tg-sectionhead tg-textalignleft">
-                            <div class="tg-sectionheading">
-                                <span>Ruta del Empedrado</span>
-                                <h2>Preguntas frecuentes</h2>
-                            </div>
-                        </div>
-                        <div id="tg-accordion" class="tg-accordion" role="tablist" aria-multiselectable="true">
-                            <div class="tg-panel">
-                                <h4><span>Q.</span>Consectetur adipisicing elit, sed do eiusmod?</h4>
-                                <div class="tg-panelcontent">
-                                    <div class="tg-description">
-                                        <p><span>A.</span>Sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua. Ut eni minim veniam, quis nostrud exercitation ullamco laboris
-                                            nisi ut aliquip exea commodo consequat aute irure dolor.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tg-panel">
-                                <h4><span>Q.</span>Nisi ut aliquip ex ea commodo consequat?</h4>
-                                <div class="tg-panelcontent">
-                                    <div class="tg-description">
-                                        <p><span>A.</span>Sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua. Ut eni minim veniam, quis nostrud exercitation ullamco laboris
-                                            nisi ut aliquip exea commodo consequat aute irure dolor.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tg-panel">
-                                <h4><span>Q.</span>Tempor incididunt ut labore?</h4>
-                                <div class="tg-panelcontent">
-                                    <div class="tg-description">
-                                        <p><span>A.</span>Sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua. Ut eni minim veniam, quis nostrud exercitation ullamco laboris
-                                            nisi ut aliquip exea commodo consequat aute irure dolor.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tg-panel">
-                                <h4><span>Q.</span>Dolore magna aliqua enim ad minim?</h4>
-                                <div class="tg-panelcontent">
-                                    <div class="tg-description">
-                                        <p><span>A.</span>Sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua. Ut eni minim veniam, quis nostrud exercitation ullamco laboris
-                                            nisi ut aliquip exea commodo consequat aute irure dolor.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-                    <div class="tg-askquestion">
-                        <div class="tg-heading">
-                            <h2>Quieres formar parte como<span>voluntario?</span></h2>
-                        </div>
-                        <form class="tg-formtheme tg-formaskquestions">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input type="text" name="nombre" class="form-control"
-                                           placeholder="Nombre Completo*">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" name="email" class="form-control" placeholder="Email*">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="telefono" class="form-control"
-                                           placeholder="Teléfono (Opcional)">
-                                </div>
-
-                                <div class="g-recaptcha"
-                                     data-sitekey="6Le_9UYUAAAAALqkkBtFDpeLoJ8c9pVrYnvOgEV6"></div>
-                                <button type="submit" class="tg-btn">Enviar</button>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     </main>
 
@@ -710,11 +829,41 @@ background-attachment: fixed;
 
 
 
-     <div id="DIV_1">
-        <div id="DIV_2">
-            <i id="I_3"></i>
+    <div id="pool" >
+  <div class="button-wrapper">
+    <div class="layer"></div>
+    <button class="main-button fa fa-camera" onclick="">
+    <div class="ripple"></div>
+    </button>
+  </div>
+  <div class="layered-content" id="fotofinish" >
+    <button class="close-button close-button1 fa fa-times"></button>
+    <div class="content">
+
+        <div class="col-md-12 text-center">
+            <h1  style="color:white">FOTO FINISH</h1>
         </div>
-        <a href="#" id="A_4"><img src="{% static 'images/fotos.png' %}" id="IMG_5" alt=''/><img
-                src="{% static 'images/fotos.png' %}" id="IMG_6" alt=''/></a>
+        <p>Escribe tu número de competidor o tu nombre:</p>
+
+
+        <form action="/">
+  <div class="form-group">
+    <label for="email"  style="color:white">Número de competidor:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="pwd" style="color:white">Nombres y Apellidos:</label>
+    <input type="password" class="form-control" id="pwd">
+  </div>
+
+  <button type="submit" class="btn btn-lg" style="width: 100%">Buscar</button>
+</form>
     </div>
+
+
+  </div>
+</div>
+
+
+
 {% endblock %}
