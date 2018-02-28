@@ -136,6 +136,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
   
 ]
+
+STATIC_ROOT = '/home/urban/rutadelempedrado/static'
 GOOGLE_RECAPTCHA_SECRET_KEY = '6Le_9UYUAAAAAKY2W0Gx45DjPHhxIpkdkin-hAmm'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
