@@ -11,21 +11,15 @@ from carrera.models import Inscripcion
 class IndexView(TemplateView):
     template_name = "index.html"
 
-# @check_recaptcha
-# def comments(request):
-#
-#     if request.method == '`POST':
-#         # form = CommentForm(request.POST)
-#         if form.is_valid() and request.recaptcha_is_valid:
-#             pass
-#             # form.save()
-#             # messages.success(request, 'New comment added with success!')
-#             # return redirect('comments')
-#     else:
-#         pass
-#     #  form = CommentForm()
-#
-#     return render(request, 'core/comments.html', {'comments': comments_list, 'form': form})
+@check_recaptcha
+def comments(request):
+
+    if request.method == 'POST':
+        correo = True
+        return render(request, 'index_correo.html', {'correo': correo})
+    else:
+
+        return render(request, 'index.html', {})
 
 
 class InscripcionView(View):

@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
+
 {% load static %}
 {% block content %}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <div id="tg-homebanner" class="tg-homebanner tg-haslayout">
         <figure class="tg-themepostimg">
             <img src="{% static 'images/banner/img-01.jpg' %}" alt="image description">
@@ -102,10 +105,8 @@
                                             economía de Latacunga.</p>
                                         <br>
 
-                                        <p> La competencia recorrerá los más bellos rincones del centro histórico de la
-                                            ciudad de Latacunga y permitirá dar al turista, visitante y atletas
-                                            foráneos una experiencia sin igual al descubrir la belleza de la ciudad y
-                                            los retos deportivos que en ella existen.</p>
+                                        <p>La organización se establece desde un comité organizador conformado por Representantes de la empresa Privada y las Parroquias Eclesiásticas de San Sebastián, El Salto y La Laguna.
+El festival está determinado por 3 partes fundamentales; Competencia Atlética, Ferias y Shows Artísticos y Cartilla Comercial.</p>
                                     </div>
 
                                 </div>
@@ -567,10 +568,17 @@
 
 
                         <figure class="snip0021">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample21.jpg" alt="sample21"/>
+                            <div style="position: relative;"><img
+                                    src="{% static 'images/competencia/competencia.jpg' %}" alt="sample21"/>
+                                <div class="btn btn-default" style="    position: absolute;bottom: 0px;right: 10px;top: 89%;
+    left: 50%; background-color: #653365; width: 50%; color: white; font-size: 1.3em; border-color: #653365">Ver categoría competitiva
+                                </div>
+                            </div>
+
                             <figcaption>
                                 <div>
-                                    <h2 style="colow:white">Categorías <span style="font-size: 20px">competitivas</span>
+                                    <h2 style="colow:white">Categorías <span
+                                            style="font-size: 20px;">competitivas</span>
                                         <div style="font-size: 25px;">
                                             <br>
                                             Juvenil
@@ -583,69 +591,70 @@
 
                                 </div>
                                 <div>
-                                    <p>Carrera 8k <br>
+                                    <p><span style="font-size: 25px;">Carrera 8k</span> <br><br>
 
-                                        <strong>Fecha:</strong> Domingo 04 de junio de 2017 <br>
+                                        <strong>Fecha:</strong> Domingo 08 de abril de 2018 <br>
 
                                         <strong>Hora:</strong> 08h30 <br>
 
-                                        <strong>Punto Partida:</strong> Planta Grupo El Comercio, P.V. Maldonado 11515 y
-                                        El Tablón <br>
+                                        <strong>Punto Partida:</strong> Plazoleta San Sebastián <br>
 
-                                        <strong>Punto de Llegada:</strong> Estadio Olímpico Atahualpa <br>
+                                        <strong>Punto de Llegada:</strong> Plazoleta San Sebastián <br>
 
-                                        <strong>Costo de inscripción:</strong> USD 25 <br>
+                                        <strong>Costo de inscripción:</strong> USD 15 <br>
                                         <strong>Beneficios atletas:</strong> <br>
-                                        Camiseta, chip de competencia, hidratación en el recorrido, medalla, seguro de
-                                        accidentes, kit de atleta entregado en la llegada. asistencia con paramédicos y
-                                        ambulancias con cobertura en toda la ruta, condiciones de seguridad en ruta
-                                        coordinadas con la Policía Nacional y Municipal.</p>
-                                    <div class="curl"></div>
+                                        Camiseta, chip de competencia, hidratación en el recorrido, medalla, kit de atleta entregado en la llegada, asistencia con paramédicos y
+                                        ambulancias, condiciones de seguridad en ruta
+                                        coordinadas con la Policía Nacional y Scout.</p>
+
                                 </div>
-                                <a href="#"></a>
+
                             </figcaption>
                         </figure>
 
                     </div>
                     <div class="col-md-6">
                         <figure class="snip0021 ">
-                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample20.jpg" alt="sample20"/>
+                            <div style="position: relative;"><img
+                                    src="{% static 'images/competencia/pet.jpg' %}" alt="sample21"/>
+                                <div class="btn btn-default" style="    position: absolute;bottom: 0px;right: 10px;top: 89%;
+    left: 50%; background-color: #653365; width: 50%; color: white; font-size: 1.3em; border-color: #653365">Ver categoría recreativa
+                                </div>
+                            </div>
                             <figcaption>
                                 <div>
-                                    <h2 style="colow:white">Categorías <span style="font-size: 20px">competitivas</span>
+                                    <h2 style="colow:white">Categorías <span style="font-size: 20px">recreativas</span>
                                         <div style="font-size: 25px;">
                                             <br>
-                                            Juvenil
+                                            Familiar
                                             <br>
-                                            Master <br>
-                                            Senior <br>
-                                            Super Master <br>
+                                            PET <br>
+                                            5K <br>
+                                            Capacidades Especiales <br>
                                         </div>
                                     </h2>
                                 </div>
                                 <div>
 
-                                    <p>Carrera 8k <br>
+                                    <p><span  style="font-size: 25px;">Carrera 5k</span> <br> <br>
 
-                                        <strong>Fecha:</strong> Domingo 04 de junio de 2017 <br>
+                                        <strong>Fecha:</strong> Domingo 08 de abril de 2018 <br>
 
-                                        <strong>Hora:</strong> 08h30 <br>
+                                        <strong>Hora:</strong> 08h45 <br>
 
-                                        <strong>Punto Partida:</strong> Planta Grupo El Comercio, P.V. Maldonado 11515 y
-                                        El Tablón <br>
+                                        <strong>Punto Partida:</strong> Plazoleta San Sebastián <br>
 
-                                        <strong>Punto de Llegada:</strong> Estadio Olímpico Atahualpa <br>
+                                        <strong>Punto de Llegada:</strong> La Laguna <br>
 
 
-                                        <strong>Costo de inscripción:</strong> USD 25 <br>
+                                        <strong>Costo de inscripción:</strong> USD 8 <br>
                                         <strong>Beneficios atletas:</strong> <br>
-                                        Camiseta, chip de competencia, hidratación en el recorrido, medalla, seguro de
-                                        accidentes, kit de atleta entregado en la llegada. asistencia con paramédicos y
-                                        ambulancias con cobertura en toda la ruta, condiciones de seguridad en ruta
-                                        coordinadas con la Policía Nacional y Municipal.</p>
-                                    <div class="curl"></div>
+                                        Camiseta, hidratación en el recorrido, medalla, asistencia con paramédicos y
+                                        ambulancias, condiciones de seguridad en ruta
+                                        coordinadas con la Policía Nacional y Scout.</p>
+
                                 </div>
-                                <a href="#"></a>
+
                             </figcaption>
                         </figure>
 
@@ -801,7 +810,7 @@
                                 <fieldset>
                                     <div class="form-group">
                                         <input type="text" name="nombre" class="form-control"
-                                               placeholder="Nombre Completo*">
+                                               placeholder="Nombre completo*">
                                     </div>
                                     <div class="form-group">
                                         <input type="email" name="email" class="form-control" placeholder="Email*">
@@ -828,40 +837,6 @@
 
 
 
-    <div id="pool" >
-  <div class="button-wrapper">
-    <div class="layer"></div>
-    <button class="main-button fa fa-camera" onclick="">
-    <div class="ripple"></div>
-    </button>
-  </div>
-  <div class="layered-content" id="fotofinish" >
-    <button class="close-button close-button1 fa fa-times"></button>
-    <div class="content">
-
-        <div class="col-md-12 text-center">
-            <h1  style="color:white">FOTO FINISH</h1>
-        </div>
-        <p>Escribe tu número de competidor o tu nombre:</p>
-
-
-        <form action="/">
-  <div class="form-group">
-    <label for="email"  style="color:white">Número de competidor:</label>
-    <input type="email" class="form-control" id="email">
-  </div>
-  <div class="form-group">
-    <label for="pwd" style="color:white">Nombres y Apellidos:</label>
-    <input type="password" class="form-control" id="pwd">
-  </div>
-
-  <button type="submit" class="btn btn-lg" style="width: 100%">Buscar</button>
-</form>
-    </div>
-
-
-  </div>
-</div>
 
 
 
