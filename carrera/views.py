@@ -41,7 +41,7 @@ class InscripcionView(View):
 
 
     def post(self, request, *args, **kwargs):
-        
+
         form = InscripcionForm(data=request.POST)
 
         content = form.cleaned_data['nombres']
@@ -58,7 +58,8 @@ class InscripcionView(View):
 
                     ctx = {
                         'nombres': form.cleaned_data["nombres"] + ' ' + form.cleaned_data["apellidos"],
-                    'valor': form.cleaned_data["categoria"].precio
+                    'valor': form.cleaned_data["categoria"].precio,
+                        'email':form.cleaned_data["email"],
                     }
                     html_part = render_to_string('email/index.html', ctx)
                     send_mail('INSCRIPCIÓN ' + form.cleaned_data["nombres"] + ' ' + form.cleaned_data["apellidos"], ' ', 'info@rutadelempedrado.com',

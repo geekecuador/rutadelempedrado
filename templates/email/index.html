@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
+{% load static %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -184,7 +184,7 @@
                                     <td width="200" valign="top" align="center">
                                         <div class="contentEditableContainer contentTextEditable">
                                             <div class="contentEditable">
-                                                <img src="https://pulloquinga.com/rutadelempedrado/logo.png" width="155"
+                                                <img src="{% static 'imagesemail/logo.png' %}" width="155"
                                                      height='155' alt='Logo'
                                                      data-default="placeholder"/>
                                             </div>
@@ -238,7 +238,7 @@
                                             <div class="contentEditable">
                                                 <div style="font-family:Helvetica, Arial, sans-serif;font-size:16px;line-height:160%;color:#181818;font-weight:lighter;">
                                                     Gracias {{ nombres }} por ser parte de la Ruta del Empedrado 8K, el
-                                                    valor de la inscripción es de {{ valor }}
+                                                    valor de la inscripción es de ${{ valor }}.
                                                 </div>
                                             </div>
                                         </div>
@@ -290,13 +290,13 @@
                                     <td width="60%" height="70" valign="middle" style="padding-bottom:20px;">
                                         <div class="contentEditableContainer contentTextEditable">
                                             <div class="contentEditable">
-                                                <span style="font-size:13px;color:#181818;font-family:Helvetica, Arial, sans-serif;line-height:200%;">Enviado a [email] por Ruta del Empedrado</span>
+                                                <span style="font-size:13px;color:#181818;font-family:Helvetica, Arial, sans-serif;line-height:200%;">Enviado a {{ email }} por Ruta del Empedrado</span>
                                                 <br/>
 
                                                 <br/>
 
                                                 <span style="font-size:13px;color:#181818;font-family:Helvetica, Arial, sans-serif;line-height:200%;">
-														<a target='_blank' href="[UNSUBSCRIBE]"
+														<a target='_blank' href="https://www.facebook.com/davidandrespulloquinga/"
                                                            style="text-decoration:none;color:#555">Hecho con </a></span>❤️
                                             </div>
                                         </div>
@@ -311,7 +311,7 @@
                                                          style='display:inline;'>
                                                         <div class="contentEditable">
                                                             <a href="https://www.facebook.com/rutadelempedrado/" target="_blank">
-                                                                  <img src="https://pulloquinga.com/rutadelempedrado/facebook.png" data-default="placeholder"
+                                                                  <img src="{% static 'imagesemail/facebook.png' %}" data-default="placeholder"
                                                                  data-max-width="30" width='30' height='30'
                                                                  alt='facebook' style='margin-right:40x;'
                                                                  data-customIcon="true">
@@ -323,7 +323,7 @@
                                                     <div class="contentEditableContainer contentTwitterEditable"
                                                          style='display:inline;'>
                                                         <div class="contentEditable">
-                                                            <a href="https://www.instagram.com/rutadelempedrado/" target="_blank" ><img src="https://pulloquinga.com/rutadelempedrado/instagram.png" data-default="placeholder"
+                                                            <a href="https://www.instagram.com/rutadelempedrado/" target="_blank" ><img src="{% static 'imagesemail/instagram.png' %}" data-default="placeholder"
                                                                  data-max-width="30" width='30' height='30'
                                                                  alt='twitter' style='margin-right:40x;'
                                                                  data-customIcon="true"></a>
@@ -356,7 +356,7 @@
                                         width="200" height="50">
                                         <div class="contentEditableContainer contentTextEditable" >
                                             <div class="contentEditable">
-                                                <a target='_blank' href="[CLIENTS.WEBSITE]" class='link2' >Visitar la
+                                                <a target='_blank' href="http://rutadelempedrado.com" class='link2' >Visitar la
                                                     web</a>
                                             </div>
                                         </div>
@@ -383,7 +383,7 @@
                                         <div class="contentEditableContainer contentImageEditable">
                                             <div class="contentEditable">
                                                 <div style="padding-top:20px;text-align:center;">
-                                                    <img src="images/6@2x.png" width="148"
+                                                    <img src="{% static 'imagesemail/6@2x.png' %}" width="148"
                                                          data-default="placeholder" data-max-width="200"
                                                          style="margin-bottom:-3px;"/>
                                                 </div>
