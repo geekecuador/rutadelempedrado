@@ -58,7 +58,7 @@ class InscripcionView(View):
 
                     ctx = {
                         'nombres': form.cleaned_data["nombres"] + ' ' + form.cleaned_data["apellidos"],
-                    'valor': Categoria.objects.get(id=form.cleaned_data["categoria"])
+                    'valor': Categoria.objects.get(id=int(form.cleaned_data["categoria"])).precio
                     }
                     html_part = render_to_string('email/reservacion.html', ctx)
                     send_mail('RESERVACIÓN ' + form.cleaned_data["nombres"] + ' ' + form.cleaned_data["apellidos"], ' ', 'info@rutadelempedrado.com',
