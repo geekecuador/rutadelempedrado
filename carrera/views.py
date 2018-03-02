@@ -1,11 +1,13 @@
+from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
 # Create your views here.
+from django.template.loader import render_to_string
 from django.views.generic import TemplateView, FormView, View, ListView
 from carrera.forms import InscripcionForm
 from carrera.decorators import check_recaptcha
-from carrera.models import Inscripcion
+from carrera.models import Inscripcion, Categoria
 
 
 class IndexView(TemplateView):
@@ -52,7 +54,16 @@ class InscripcionView(View):
                     if corredor:
                         return HttpResponseRedirect('/registroexiste/' + form.cleaned_data["cedula"])
                 except Inscripcion.DoesNotExist:
-                    form.save()
+                    guardado = form.save()
+
+                    ctx = {
+                        'nombres': guardado.nombres + ' ' + guardado.apellidos,
+                    'valor': str(guardado.categoria.precio)
+                    }
+                    html_part = render_to_string('email/reservacion.html', ctx)
+                    send_mail('RESERVACIÓN ' + guardado.nombres + ' ' + guardado.apellidos, ' ', 'info@rutadelempedrado.com',
+                              [guardado.email], fail_silently=False,
+                              html_message=html_part)
                     return HttpResponseRedirect('/gracias')
 
             else:
