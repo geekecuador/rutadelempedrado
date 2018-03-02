@@ -41,11 +41,11 @@ class InscripcionView(View):
 
 
     def post(self, request, *args, **kwargs):
-        print("Metodo post")
+        
         form = InscripcionForm(data=request.POST)
-        print(form)
+
         content = form.cleaned_data['nombres']
-        print(content)
+
         if request.method =='POST':
             # <process form cleaned data>
             if form.is_valid():
@@ -56,14 +56,14 @@ class InscripcionView(View):
                 except Inscripcion.DoesNotExist:
                     form.save()
 
-                    # ctx = {
-                    #     'nombres': form.cleaned_data["nombres"] + ' ' + form.cleaned_data["apellidos"],
-                    # 'valor': Categoria.objects.get(id=int(form.cleaned_data["categoria"])).precio
-                    # }
-                    # html_part = render_to_string('email/reservacion.html', ctx)
-                    # send_mail('RESERVACIÓN ' + form.cleaned_data["nombres"] + ' ' + form.cleaned_data["apellidos"], ' ', 'info@rutadelempedrado.com',
-                    #           [form.cleaned_data["email"]], fail_silently=False,
-                    #           html_message=html_part)
+                    ctx = {
+                        'nombres': form.cleaned_data["nombres"] + ' ' + form.cleaned_data["apellidos"],
+                    'valor': form.cleaned_data["categoria"].precio
+                    }
+                    html_part = render_to_string('email/index.html', ctx)
+                    send_mail('INSCRIPCIÓN ' + form.cleaned_data["nombres"] + ' ' + form.cleaned_data["apellidos"], ' ', 'info@rutadelempedrado.com',
+                              [form.cleaned_data["email"]], fail_silently=False,
+                              html_message=html_part)
                     return HttpResponseRedirect('/gracias')
 
             else:
