@@ -54,15 +54,15 @@ class InscripcionView(View):
                     if corredor:
                         return HttpResponseRedirect('/registroexiste/' + form.cleaned_data["cedula"])
                 except Inscripcion.DoesNotExist:
-                    guardado = form.save()
+                    form.save()
 
                     ctx = {
-                        'nombres': guardado.nombres + ' ' + guardado.apellidos,
-                    'valor': str(guardado.categoria.precio)
+                        'nombres': form.cleaned_data["nombres"] + ' ' + form.cleaned_data["apellidos"],
+                    'valor': Categoria.objects.get(id=form.cleaned_data["categoria"])
                     }
                     html_part = render_to_string('email/reservacion.html', ctx)
-                    send_mail('RESERVACIÓN ' + guardado.nombres + ' ' + guardado.apellidos, ' ', 'info@rutadelempedrado.com',
-                              [guardado.email], fail_silently=False,
+                    send_mail('RESERVACIÓN ' + form.cleaned_data["nombres"] + ' ' + form.cleaned_data["apellidos"], ' ', 'info@rutadelempedrado.com',
+                              [form.cleaned_data["email"]], fail_silently=False,
                               html_message=html_part)
                     return HttpResponseRedirect('/gracias')
 
