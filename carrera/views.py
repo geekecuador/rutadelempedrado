@@ -44,8 +44,6 @@ class InscripcionView(View):
 
         form = InscripcionForm(data=request.POST)
 
-        content = form.cleaned_data['nombres']
-
         if request.method =='POST':
             # <process form cleaned data>
             if form.is_valid():
