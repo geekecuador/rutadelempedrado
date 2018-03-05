@@ -101,21 +101,21 @@ class InscripcionForm(forms.Form):
         data = self.cleaned_data
 
         inscripcion = Inscripcion()
-        inscripcion.nombres = data['nombres']
-        inscripcion.apellidos = data['apellidos']
+        inscripcion.nombres = data['nombres'].capitalize()
+        inscripcion.apellidos = data['apellidos'].capitalize()
         inscripcion.cedula = data['cedula']
         inscripcion.fechaNacimiento = data['fechaNacimiento']
         inscripcion.telefono = data['telefono']
-        inscripcion.email = data['email']
-        inscripcion.ciudad = data['ciudad']
+        inscripcion.email = data['email'].lowercase()
+        inscripcion.ciudad = data['ciudad'].capitalize()
         inscripcion.genero = data['genero']
         inscripcion.categoria = data['categoria']
         inscripcion.talla = data['talla']
         inscripcion.tipoDeSangre = data['tipoDeSangre']
         inscripcion.alergias = data['alergias']
         inscripcion.club = data['club']
-        inscripcion.clubNombre = data['clubNombre']
-        inscripcion.nombreContactoEmergencia = data['nombreContactoEmergencia']
+        inscripcion.clubNombre = data['clubNombre'].capitalize()
+        inscripcion.nombreContactoEmergencia = data['nombreContactoEmergencia'].capitalize()
         inscripcion.telefonoContactoEmergencia = data['telefonoContactoEmergencia']
         inscripcion.save()
         # ctx = {
