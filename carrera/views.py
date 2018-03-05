@@ -1,4 +1,5 @@
 from django.core.mail import send_mail
+from django.db import transaction
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
@@ -39,7 +40,7 @@ class InscripcionView(View):
         form = self.form_class()
         return render(request, self.template_name, {'form': form})
 
-
+    @transaction.atomic
     def post(self, request, *args, **kwargs):
 
         form = InscripcionForm(data=request.POST)
@@ -48,6 +49,7 @@ class InscripcionView(View):
             # <process form cleaned data>
             if form.is_valid():
                 try:
+
                     corredor = Inscripcion.objects.get(cedula=form.cleaned_data["cedula"])
                     if corredor:
                         return HttpResponseRedirect('/registroexiste/' + form.cleaned_data["cedula"])
