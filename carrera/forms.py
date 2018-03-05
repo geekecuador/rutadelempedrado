@@ -106,7 +106,7 @@ class InscripcionForm(forms.Form):
         inscripcion.cedula = data['cedula']
         inscripcion.fechaNacimiento = data['fechaNacimiento']
         inscripcion.telefono = data['telefono']
-        inscripcion.email = data['email'].lowercase()
+        inscripcion.email = data['email']
         inscripcion.ciudad = data['ciudad'].capitalize()
         inscripcion.genero = data['genero']
         inscripcion.categoria = data['categoria']
