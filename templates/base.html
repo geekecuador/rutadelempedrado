@@ -36,10 +36,11 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-<div id="tg-wrapper" class="tg-wrapper tg-haslayout" style="background-image: url('{% static 'images/empedrado.jpg' %}');  ;
+<div id="tg-wrapper" class="tg-wrapper tg-haslayout"
+     style="background-image: url('{% static 'images/empedrado.jpg' %}');  ;
 
-background-attachment: fixed;
-    background-size: cover;">
+             background-attachment: fixed;
+             background-size: cover;">
 
     <header id="tg-header" class="tg-header tg-haslayout" data-spy="affix" data-offset-top="10">
         <div class="container">
@@ -48,7 +49,7 @@ background-attachment: fixed;
                     <strong class="tg-logo"><a href="/"><img src="{% static 'images/logo.png' %}"
                                                              alt="company logo here"></a></strong>
                     <div class="tg-navigationarea">
-{#                        <span class="tg-badge">256 inscritos</span>#}
+                        {#                        <span class="tg-badge">256 inscritos</span>#}
                         <a class="tg-btn tg-btnbecommember" href="/inscripcion">Inscripciones</a>
 
                         <nav id="tg-nav" class="tg-nav">
@@ -63,11 +64,11 @@ background-attachment: fixed;
                             </div>
                             <div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
                                 <ul>
-                                    <li><a href="/">Inicio</a></li>
-                                         <li><a href="/#auspiciantes">Auspiciantes</a></li>
-                                    <li><a href="/#carrera">La Carrera</a></li>
-                                    <li><a href="/#recorrido">Recorrido</a></li>
-                                    <li><a href="/#categorias">Categorías</a></li>
+                                    <li><a href="/" onclick="inicio()">Inicio</a></li>
+                                    <li><a href="/#auspiciantes" onclick="auspiciantes()">Auspiciantes</a></li>
+                                    <li><a href="/#carrera" onclick="carrera()">La Carrera</a></li>
+                                    <li><a href="/#recorrido" onclick="recorrido()">Recorrido</a></li>
+                                    <li><a href="/#categorias" onclick="categorias()">Categorías</a></li>
 
                                     <li><a href="/#faq">FAQ</a></li>
                                 </ul>
@@ -90,8 +91,10 @@ background-attachment: fixed;
             <div class="container">
                 <div class="row">
                     <ul class="tg-socialicons pull-right">
-                        <li class="tg-facebook"><a href="https://www.facebook.com/rutadelempedrado/"><i class="fa fa-facebook"></i></a></li>
-                        <li class="tg-instagram"><a href="https://www.instagram.com/rutadelempedrado/"><i class="fa fa-instagram"></i></a></li>
+                        <li class="tg-facebook"><a href="https://www.facebook.com/rutadelempedrado/"><i
+                                class="fa fa-facebook"></i></a></li>
+                        <li class="tg-instagram"><a href="https://www.instagram.com/rutadelempedrado/"><i
+                                class="fa fa-instagram"></i></a></li>
 
                     </ul>
                     <p class="tg-copyrights pull-left">2018 All Rights Reserved © Ruta del Empedrado</p>
@@ -115,103 +118,103 @@ background-attachment: fixed;
 
 
 //jQuery time
-var current_fs, next_fs, previous_fs; //fieldsets
-var left, opacity, scale; //fieldset properties which we will animate
-var animating; //flag to prevent quick multi-click glitches
+        var current_fs, next_fs, previous_fs; //fieldsets
+        var left, opacity, scale; //fieldset properties which we will animate
+        var animating; //flag to prevent quick multi-click glitches
 
-jQuery(".next").click(function(){
-	if(animating) return false;
-	animating = true;
+        jQuery(".next").click(function () {
+            if (animating) return false;
+            animating = true;
 
-	current_fs = $(this).parent();
-	next_fs = $(this).parent().next();
+            current_fs = $(this).parent();
+            next_fs = $(this).parent().next();
 
-	//activate next step on progressbar using the index of next_fs
-	jQuery("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+            //activate next step on progressbar using the index of next_fs
+            jQuery("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 
-	//show the next fieldset
-	next_fs.show();
-	//hide the current fieldset with style
-	current_fs.animate({opacity: 0}, {
-		step: function(now, mx) {
-			//as the opacity of current_fs reduces to 0 - stored in "now"
-			//1. scale current_fs down to 80%
-			scale = 1 - (1 - now) * 0.2;
-			//2. bring next_fs from the right(50%)
-			left = (now * 50)+"%";
-			//3. increase opacity of next_fs to 1 as it moves in
-			opacity = 1 - now;
-			current_fs.css({
-        'transform': 'scale('+scale+')',
-        'position': 'absolute'
-      });
-			next_fs.css({'left': left, 'opacity': opacity});
-		},
-		duration: 800,
-		complete: function(){
-			current_fs.hide();
-			animating = false;
-		},
-		//this comes from the custom easing plugin
-		easing: 'easeInOutBack'
-	});
-});
+            //show the next fieldset
+            next_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({opacity: 0}, {
+                step: function (now, mx) {
+                    //as the opacity of current_fs reduces to 0 - stored in "now"
+                    //1. scale current_fs down to 80%
+                    scale = 1 - (1 - now) * 0.2;
+                    //2. bring next_fs from the right(50%)
+                    left = (now * 50) + "%";
+                    //3. increase opacity of next_fs to 1 as it moves in
+                    opacity = 1 - now;
+                    current_fs.css({
+                        'transform': 'scale(' + scale + ')',
+                        'position': 'absolute'
+                    });
+                    next_fs.css({'left': left, 'opacity': opacity});
+                },
+                duration: 800,
+                complete: function () {
+                    current_fs.hide();
+                    animating = false;
+                },
+                //this comes from the custom easing plugin
+                easing: 'easeInOutBack'
+            });
+        });
 
-jQuery(".previous").click(function(){
-	if(animating) return false;
-	animating = true;
+        jQuery(".previous").click(function () {
+            if (animating) return false;
+            animating = true;
 
-	current_fs = $(this).parent();
-	previous_fs = $(this).parent().prev();
+            current_fs = $(this).parent();
+            previous_fs = $(this).parent().prev();
 
-	//de-activate current step on progressbar
-	jQuery("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+            //de-activate current step on progressbar
+            jQuery("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 
-	//show the previous fieldset
-	previous_fs.show();
-	//hide the current fieldset with style
-	current_fs.animate({opacity: 0}, {
-		step: function(now, mx) {
-			//as the opacity of current_fs reduces to 0 - stored in "now"
-			//1. scale previous_fs from 80% to 100%
-			scale = 0.8 + (1 - now) * 0.2;
-			//2. take current_fs to the right(50%) - from 0%
-			left = ((1-now) * 50)+"%";
-			//3. increase opacity of previous_fs to 1 as it moves in
-			opacity = 1 - now;
-			current_fs.css({'left': left});
-			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-		},
-		duration: 800,
-		complete: function(){
-			current_fs.hide();
-			animating = false;
-		},
-		//this comes from the custom easing plugin
-		easing: 'easeInOutBack'
-	});
-});
+            //show the previous fieldset
+            previous_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({opacity: 0}, {
+                step: function (now, mx) {
+                    //as the opacity of current_fs reduces to 0 - stored in "now"
+                    //1. scale previous_fs from 80% to 100%
+                    scale = 0.8 + (1 - now) * 0.2;
+                    //2. take current_fs to the right(50%) - from 0%
+                    left = ((1 - now) * 50) + "%";
+                    //3. increase opacity of previous_fs to 1 as it moves in
+                    opacity = 1 - now;
+                    current_fs.css({'left': left});
+                    previous_fs.css({'transform': 'scale(' + scale + ')', 'opacity': opacity});
+                },
+                duration: 800,
+                complete: function () {
+                    current_fs.hide();
+                    animating = false;
+                },
+                //this comes from the custom easing plugin
+                easing: 'easeInOutBack'
+            });
+        });
 
-jQuery(".submit").click(function(){
-	return false;
-})
+        jQuery(".submit").click(function () {
+            return false;
+        })
 
     });
 
 
- $("#id_club").change( function(){
-  $('#id_clubNombre').attr('type', 'text');
-  console.log("Hola");
-});
+    $("#id_club").change(function () {
+        $('#id_clubNombre').attr('type', 'text');
+        console.log("Hola");
+    });
 
- $("#id_club").change(function() {
-    if(this.checked) {
-         $('#id_clubNombre').attr('type', 'text');
-    }
-    else{
-        $('#id_clubNombre').attr('type', 'hidden');
-    }
-});
+    $("#id_club").change(function () {
+        if (this.checked) {
+            $('#id_clubNombre').attr('type', 'text');
+        }
+        else {
+            $('#id_clubNombre').attr('type', 'hidden');
+        }
+    });
 
 </script>
 <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
@@ -369,6 +372,31 @@ jQuery(".submit").click(function(){
 
 </style>
 
+<script>
+    function inicio() {
+       window.location.href = "http://rutadelempedrado.com/";
+    }
+
+    function auspiciantes() {
+        window.location.href = "http://www.rutadelempedrado.com/#auspiciantes";
+    }
+
+    function carrera() {
+       window.location.href = "http://www.rutadelempedrado.com/#carrera";
+    }
+
+    function recorrido() {
+     window.location.href = "http://www.rutadelempedrado.com/#recorrido";
+    }
+
+    function categorias() {
+        window.location.href = "http://www.rutadelempedrado.com/#categorias";
+    }
+
+    function faq() {
+        window.location.href = "http://www.rutadelempedrado.com/#faq";
+    }
+</script>
 
 </body>
 </html>
