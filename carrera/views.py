@@ -59,7 +59,7 @@ class InscripcionView(View):
             inscripcion.apellidos = request.POST['apellidos'].title()
             inscripcion.cedula = request.POST['cedula']
             inscripcion.telefono = request.POST['telefono']
-            inscripcion.email = request.POST['email']
+            inscripcion.email = request.POST['email'].lower()
             inscripcion.fechaNacimiento = fechaNacimiento
             inscripcion.ciudad = request.POST['ciudad'].title()
             inscripcion.genero = request.POST['genero']
@@ -73,14 +73,14 @@ class InscripcionView(View):
             inscripcion.telefonoContactoEmergencia = request.POST['telefonoContactoEmergencia']
             inscripcion.save()
             ctx = {
-                'nombres': request.POST["nombres"] + ' ' + request.POST["apellidos"],
+                'nombres': request.POST["nombres"].title() + ' ' + request.POST["apellidos"].title(),
                 'valor': Categoria.objects.get(id=request.POST['categoria']).precio,
-                'email': request.POST["email"],
+                'email': request.POST["email"].lower(),
             }
             html_part = render_to_string('email/index.html', ctx)
             send_mail('INSCRIPCIÓN ' + request.POST["nombres"].title() + ' ' + request.POST["apellidos"].title(), ' ',
                       'info@rutadelempedrado.com',
-                      [request.POST["email"], 'info@rutadelempedrado.com'], fail_silently=False,
+                      [request.POST["email"].lower(), 'info@rutadelempedrado.com'], fail_silently=False,
                       html_message=html_part)
             return HttpResponseRedirect('/gracias')
 
