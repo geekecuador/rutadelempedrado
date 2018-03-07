@@ -12,156 +12,159 @@
                 <div style="text-align: center;padding-top: 5%">
 
 
-<div class="tg-sectionheading">
+                    <div class="tg-sectionheading">
 
-                                <h2 style="font-size: 35px; color: white;font-family: 'Montserrat', sans-serif;">Registro Existente</h2>
-                            </div>
+                        <h2 style="font-size: 35px; color: white;font-family: 'Montserrat', sans-serif;">Registro
+                            Existente</h2>
+                    </div>
                     <br>
                     <p style="color: white">
-                       Ya estas inscrito en la Ruta del Empedrado 8K, difruta y preparate. Nos vemos el 08 de Abril en la largada.
+                        Ya estas inscrito en la Ruta del Empedrado 8K, difruta y prepárate. Nos vemos el 08 de Abril en
+                        la largada.
                     </p>
+
+                    <p style="color: white">
+                        Si la información registrada es errónea o necesitas actualizar la información envíanos un correo
+                        a
+                        <a href="mailto:produccion@rutadelempedrado.com">produccion@rutadelempedrado.com</a>
+                    </p>
+
                 </div>
 
 
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Nombre(s): {{ corredor.nombres }}</label>
+                        {{ form.nombres.errors }}
+                        <div class="input-group col-md-12">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Apellidos: {{ corredor.apellidos }}</label>
+                        <div class="input-group col-md-12"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Cédula: {{ corredor.cedula }}</label>
+                        <div class="input-group col-md-12"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Fecha de nacimiento: {{ corredor.fechaNacimiento }}</label>
+                        <div class="input-group col-md-12"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Teléfono: {{ corredor.telefono }}</label>
+                        <div class="input-group col-md-12"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Email: {{ corredor.email }}</label>
+                        <div class="input-group col-md-12"
+                             style="text-transform: lowercase !important;"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Ciudad: {{ corredor.ciudad }}</label>
+                        <div class="input-group col-md-12">
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Género: {{ corredor.genero }}</label>
+                        <div class="input-group col-md-12">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Categoría: {{ corredor.categoria }}</label>
+                        <div class="input-group col-md-12">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Talla: {{ corredor.talla }}</label>
+                        <div class="input-group col-md-12"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Tipo de sangre: {{ corredor.tipoDeSangre }}</label>
+                        <div class="input-group col-md-12"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Alergias: {{ corredor.alergias }}</label>
+                        <div class="input-group col-md-12"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">Pertenece algún club: {{ corredor.clubNombre }}</label>
+                        <div class="input-group">
+
+                        </div>
+                        <div class="input-group col-md-12">
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-md-12 inputGroupContainer">
+                        <label class="control-label">EN CASO DE EMERGENCIA</label>
+
+                    </div>
                     <div class="form-group">
 
                         <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Nombre(s): {{ corredor.nombres }}</label>
-                            {{ form.nombres.errors }}
+                            <label class="control-label">Persona de
+                                contacto: {{ corredor.nombreContactoEmergencia }}</label>
                             <div class="input-group col-md-12">
-
-                                </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Apellidos: {{ corredor.apellidos }}</label>
-                            <div class="input-group col-md-12"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Cédula: {{ corredor.cedula }}</label>
-                            <div class="input-group col-md-12"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Fecha de nacimiento: {{ corredor.fechaNacimiento }}</label>
-                            <div class="input-group col-md-12"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Teléfono: {{ corredor.telefono }}</label>
-                            <div class="input-group col-md-12"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Email: {{ corredor.email }}</label>
-                            <div class="input-group col-md-12"
-                                 style="text-transform: lowercase !important;"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Ciudad:   {{ corredor.ciudad }}</label>
-                            <div class="input-group col-md-12">
-
-
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
 
                         <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Género: {{ corredor.genero }}</label>
+                            <label class="control-label">Teléfono de
+                                contacto: {{ corredor.telefonoContactoEmergencia }}</label>
                             <div class="input-group col-md-12">
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                </div>
 
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Categoría: {{ corredor.categoria }}</label>
-                            <div class="input-group col-md-12">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Talla: {{ corredor.talla }}</label>
-                            <div class="input-group col-md-12"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Tipo de sangre: {{ corredor.tipoDeSangre }}</label>
-                            <div class="input-group col-md-12"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Alergias: {{ corredor.alergias }}</label>
-                            <div class="input-group col-md-12"></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">Pertenece algún club: {{ corredor.clubNombre }}</label>
-                            <div class="input-group">
-
-                            </div>
-                            <div class="input-group col-md-12">
-
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="col-md-12 inputGroupContainer">
-                            <label class="control-label">EN CASO DE EMERGENCIA</label>
-
-                        </div>
-                        <div class="form-group">
-
-                            <div class="col-md-12 inputGroupContainer">
-                                <label class="control-label">Persona de contacto: {{ corredor.nombreContactoEmergencia }}</label>
-                                <div class="input-group col-md-12">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-
-                            <div class="col-md-12 inputGroupContainer">
-                                <label class="control-label">Teléfono de contacto: {{ corredor.telefonoContactoEmergencia }}</label>
-                                <div class="input-group col-md-12">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-12">
-
-                        <p style="color:white"><br>
-                            ¡ATENCIÓN!: Al dar click en Enviar, aceptas el <a href="#" style="color: #cfc200">Deslinde
-                                de Responsabilidad</a> y
-                            el
-                            <a href="#" style="color: #cfc200">Reglamento de Ruta del Empedrado 8K</a></p>
-                        <div class="col-md-12 text-right">
-
-
-                        </div>
-                    </div>
+                <br>
+                <br>
+                <br>
 
 
             </div>

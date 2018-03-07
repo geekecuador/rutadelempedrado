@@ -648,7 +648,24 @@ jQuery(document).on('ready', function () {
             });
 
 
+function dia() {
+            var dia = document.getElementById('dia').value;
+            var fecha = mes + '/'+ dia+'/'+ano
+            document.getElementById('fechaNacimiento').value = fecha
 
+        }
+
+        function mes() {
+            var dia = document.getElementById('mes'').value;
+             var fecha = mes + '/'+ dia+'/'+ano
+            document.getElementById('fechaNacimiento').value = fecha
+        }
+
+        function ano() {
+            var dia = document.getElementById('ano').value;
+             var fecha = mes + '/'+ dia+'/'+ano
+            document.getElementById('fechaNacimiento').value = fecha
+        }
 
 });
 $("figure").mouseleave(

@@ -1,6 +1,7 @@
 from django import forms
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from datetime import datetime
 
 from carrera.models import Inscripcion, Categoria
 from carrera.choices import *
@@ -26,11 +27,13 @@ class InscripcionForm(forms.Form):
 
                                       }))
     fechaNacimiento = forms.DateField(label='Fecha de Nacimiento', input_formats=['%m-%d-%Y'],
-                                      widget=forms.TextInput(attrs=
+                                      widget=forms.HiddenInput(attrs=
                                       {
-                                          'id': 'datepicker',
+                                          'id': 'fechaNacimiento',
                                           'class': 'form-control',
-                                          'placeholder':'Ej.: 12-24-1993'
+                                          'placeholder':'Ej.: 12-24-1993',
+                                          'value': '',
+
                                       }))
     telefono = forms.CharField(label='Teléfono',widget=forms.TextInput(attrs=
                                       {
@@ -104,7 +107,6 @@ class InscripcionForm(forms.Form):
         inscripcion.nombres = data['nombres'].capitalize()
         inscripcion.apellidos = data['apellidos'].capitalize()
         inscripcion.cedula = data['cedula']
-        inscripcion.fechaNacimiento = data['fechaNacimiento']
         inscripcion.telefono = data['telefono']
         inscripcion.email = data['email']
         inscripcion.ciudad = data['ciudad'].capitalize()
