@@ -87,8 +87,8 @@ class InscripcionView(View):
             # Create an SNS client
             client = boto3.client(
                 "sns",
-                aws_access_key_id='AKIAJEYTONEIT35ELBWA',
-                aws_secret_access_key='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',
+                aws_access_key_id='',
+                aws_secret_access_key='',
                 region_name="us-west-2"
             )
 
