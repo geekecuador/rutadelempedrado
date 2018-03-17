@@ -2,4 +2,9 @@ from django.contrib import admin
 from .models import Categoria,Inscripcion
 # Register your models here.
 admin.site.register(Categoria)
-admin.site.register(Inscripcion)
+
+@admin.register(Inscripcion)
+class InscripcionAdmin(admin.ModelAdmin):
+  search_fields = ['apellidos',]
+  list_display = ('nombres','apellidos','categoria')
+  list_filter = ('categoria',)
