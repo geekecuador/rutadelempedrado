@@ -28,3 +28,5 @@ urlpatterns = [
     path('inscripcion/', InscripcionView.as_view())
 
 ]
+
+admin.site.site_header = 'RUTA DEL EMPEDRADO'
