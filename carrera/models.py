@@ -46,23 +46,7 @@ def do_something_when_user_updated(sender, instance, created, **kwargs):
 
 
         if inscripcion.Pago:
-            import boto3
-
-            # Create an SNS client
-            client = boto3.client(
-                "sns",
-                aws_access_key_id='AKIAINWGJRX6VHPNIICA',
-                aws_secret_access_key='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',
-                aws_access_key_id='',
-                aws_secret_access_key='',
-                region_name="us-west-2"
-            )
-
-            # Send your sms message.
-            client.publish(
-                PhoneNumber='+593' + inscripcion.telefono[1:10],
-                Message="Muchas gracias por su pago en la Ruta del Empedrado"
-            )
+            
             ctx = {
                 'nombres': inscripcion.nombres + ' '+inscripcion.apellidos,
                 'email': inscripcion.email,
