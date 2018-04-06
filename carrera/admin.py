@@ -6,9 +6,6 @@ admin.site.register(Categoria)
 @admin.register(Inscripcion)
 class InscripcionAdmin(admin.ModelAdmin):
   search_fields = ['apellidos',]
-<<<<<<< HEAD
   list_display = ('nombres','apellidos','categoria','Pago')
-=======
   list_display = ('nombres','apellidos','categoria','Pago','cedula')
->>>>>>> 85bb5ccf76f7634b7a6dbc444fe6a62aae4cad20
   list_filter = ('categoria','Pago')
