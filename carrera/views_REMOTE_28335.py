@@ -67,10 +67,7 @@ class InscripcionView(View):
             inscripcion.talla = request.POST['talla']
             inscripcion.tipoDeSangre = request.POST['tipoDeSangre']
             inscripcion.alergias = request.POST['alergias']
-            if request.POST.get('club') == 'on':
-                inscripcion.club = True
-            else:
-                inscripcion.club = False
+            inscripcion.club = request.POST.get('club', False)
             inscripcion.clubNombre = request.POST['clubNombre'].title()
             inscripcion.nombreContactoEmergencia = request.POST['nombreContactoEmergencia'].title()
             inscripcion.telefonoContactoEmergencia = request.POST['telefonoContactoEmergencia']
@@ -90,13 +87,8 @@ class InscripcionView(View):
             # Create an SNS client
             client = boto3.client(
                 "sns",
-<<<<<<< HEAD
-                aws_access_key_id='AKIAINWGJRX6VHPNIICA',
-                aws_secret_access_key='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',
-=======
                 aws_access_key_id='',
                 aws_secret_access_key='',
->>>>>>> 85bb5ccf76f7634b7a6dbc444fe6a62aae4cad20
                 region_name="us-west-2"
             )
 
