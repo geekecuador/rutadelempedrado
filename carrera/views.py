@@ -67,7 +67,10 @@ class InscripcionView(View):
             inscripcion.talla = request.POST['talla']
             inscripcion.tipoDeSangre = request.POST['tipoDeSangre']
             inscripcion.alergias = request.POST['alergias']
-            inscripcion.club = request.POST.get('club', False)
+            if request.POST.get('club') == 'on':
+                inscripcion.club = True
+            else:
+                inscripcion.club = False
             inscripcion.clubNombre = request.POST['clubNombre'].title()
             inscripcion.nombreContactoEmergencia = request.POST['nombreContactoEmergencia'].title()
             inscripcion.telefonoContactoEmergencia = request.POST['telefonoContactoEmergencia']
