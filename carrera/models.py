@@ -38,23 +38,23 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nombre
 
-@receiver(post_save, sender=Inscripcion)
-def do_something_when_user_updated(sender, instance, created, **kwargs):
-    if not created:
-        # User object updated
-        inscripcion = instance
-
-
-        if inscripcion.Pago:
-
-            ctx = {
-                'nombres': inscripcion.nombres + ' '+inscripcion.apellidos,
-                'email': inscripcion.email,
-            }
-            html_part = render_to_string('email/pago.html', ctx)
-            send_mail('PAGO ' + inscripcion.nombres + ' '+inscripcion.apellidos, ' ',
-                      'info@rutadelempedrado.com',
-                      [inscripcion.email, 'info@rutadelempedrado.com'], fail_silently=False,
-                      html_message=html_part)
-        else:
-            pass
+# @receiver(post_save, sender=Inscripcion)
+# def do_something_when_user_updated(sender, instance, created, **kwargs):
+#     if not created:
+#         # User object updated
+#         inscripcion = instance
+#
+#
+#         if inscripcion.Pago:
+#
+#             ctx = {
+#                 'nombres': inscripcion.nombres + ' '+inscripcion.apellidos,
+#                 'email': inscripcion.email,
+#             }
+#             html_part = render_to_string('email/pago.html', ctx)
+#             send_mail('PAGO ' + inscripcion.nombres + ' '+inscripcion.apellidos, ' ',
+#                       'info@rutadelempedrado.com',
+#                       [inscripcion.email, 'info@rutadelempedrado.com'], fail_silently=False,
+#                       html_message=html_part)
+#         else:
+#             pass
