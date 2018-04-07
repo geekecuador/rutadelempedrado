@@ -132,9 +132,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = '/home/urban/rutadelempedrado/static'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+# ]
 
 
 GOOGLE_RECAPTCHA_SECRET_KEY = '6Leqr0kUAAAAAEyzOjJb-DIgkZ8FIEB9T0eZYDph'
