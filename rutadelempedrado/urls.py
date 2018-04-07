@@ -25,7 +25,7 @@ urlpatterns = [
     path('', IndexView.as_view()),
     path('gracias', GraciasView.as_view()),
     path('registroexiste/<slug:cedula>/',registroexiste ),
-    path('inscripcion/', InscripcionView.as_view())
+    # path('inscripcion/', InscripcionView.as_view())
 
 ]
 
