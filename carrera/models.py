@@ -8,7 +8,7 @@ from carrera.choices import *
 # Create your models here.
 class Inscripcion(models.Model):
 
-    numero = models.IntegerField()
+    numero = models.IntegerField(default=0)
     nombres = models.CharField(max_length=45)
     apellidos = models.CharField(max_length=45)
     cedula = models.CharField(max_length=13,unique=True)
