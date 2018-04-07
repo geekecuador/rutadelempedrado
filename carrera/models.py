@@ -8,7 +8,7 @@ from carrera.choices import *
 # Create your models here.
 class Inscripcion(models.Model):
 
-
+    numero = models.IntegerField()
     nombres = models.CharField(max_length=45)
     apellidos = models.CharField(max_length=45)
     cedula = models.CharField(max_length=13,unique=True)
@@ -46,7 +46,7 @@ def do_something_when_user_updated(sender, instance, created, **kwargs):
 
 
         if inscripcion.Pago:
-            
+
             ctx = {
                 'nombres': inscripcion.nombres + ' '+inscripcion.apellidos,
                 'email': inscripcion.email,
