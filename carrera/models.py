@@ -26,6 +26,7 @@ class Inscripcion(models.Model):
     nombreContactoEmergencia = models.CharField(max_length=45)
     telefonoContactoEmergencia = models.CharField(max_length=15)
     Pago = models.NullBooleanField()
+    entregado = models.BooleanField(default=False)
     def __str__(self):
         return self.nombres +" " +self.apellidos
 
